@@ -1040,7 +1040,6 @@ function createValidAbsoluteUrl(url, baseUrl = null, options = null) {
 }
 
 function shadow(obj, prop, value) {
-  assert(prop in obj, `shadow: Property "${prop && prop.toString()}" not found in object.`);
   Object.defineProperty(obj, prop, {
     value,
     enumerable: true,
@@ -1225,7 +1224,6 @@ function arraysToBytes(arr) {
 }
 
 function string32(value) {
-  assert(typeof value === "number" && Math.abs(value) < 2 ** 32, `string32: Unexpected input "${value}".`);
   return String.fromCharCode(value >> 24 & 0xff, value >> 16 & 0xff, value >> 8 & 0xff, value & 0xff);
 }
 
@@ -2041,7 +2039,7 @@ async function _fetchDocument(worker, source, pdfDataRangeTransport, docId) {
 
   const workerId = await worker.messageHandler.sendWithPromise("GetDocRequest", {
     docId,
-    apiVersion: null,
+    apiVersion: '2.12.317',
     source: {
       data: source.data,
       url: source.url,
@@ -2792,8 +2790,6 @@ class PDFPageProxy {
     renderingIntent,
     cacheKey
   }) {
-    (0, _util.assert)(Number.isInteger(renderingIntent) && renderingIntent > 0, '_pumpOperatorList: Expected valid "renderingIntent" argument.');
-
     const readableStream = this._transport.messageHandler.sendWithStream("GetOperatorList", {
       pageIndex: this._pageIndex,
       intent: renderingIntent,
@@ -2859,8 +2855,6 @@ class PDFPageProxy {
     reason,
     force = false
   }) {
-    (0, _util.assert)(reason instanceof Error, '_abortOperatorList: Expected valid "reason" argument.');
-
     if (!intentState.streamReader) {
       return;
     }
@@ -4220,9 +4214,9 @@ class InternalRenderTask {
 
 }
 
-const version = '2.12.316';
+const version = '2.12.317';
 exports.version = version;
-const build = '2d63a99ba';
+const build = '0defd998c';
 exports.build = build;
 
 /***/ }),
@@ -4253,7 +4247,7 @@ class BaseFontLoader {
     this._onUnsupportedFeature = onUnsupportedFeature;
     this._document = ownerDocument;
     this.nativeFontFaces = [];
-    this.styleElement = styleElement;
+    this.styleElement = null;
   }
 
   addNativeFontFace(nativeFontFace) {
@@ -4341,7 +4335,7 @@ class BaseFontLoader {
 
   get isFontLoadingAPISupported() {
     const hasFonts = !!this._document?.fonts;
-    return (0, _util.shadow)(this, "isFontLoadingAPISupported", hasFonts && !this.styleElement);
+    return (0, _util.shadow)(this, "isFontLoadingAPISupported", hasFonts);
   }
 
   get isSyncFontLoadingSupported() {
@@ -8102,7 +8096,8 @@ const StreamKind = {
 
 function wrapReason(reason) {
   if (!(reason instanceof Error || typeof reason === "object" && reason !== null)) {
-    throw new Error('wrapReason: Expected "reason" to be a (possibly cloned) Error.');
+    (0, _util.warn)('wrapReason: Expected "reason" to be a (possibly cloned) Error.');
+    return reason;
   }
 
   switch (reason.name) {
@@ -8216,7 +8211,6 @@ class MessageHandler {
   }
 
   on(actionName, handler) {
-    (0, _util.assert)(typeof handler === "function", 'MessageHandler.on: Expected "handler" to be a function.');
     const ah = this.actionHandler;
 
     if (ah[actionName]) {
@@ -9525,8 +9519,6 @@ class AnnotationElement {
   }
 
   _renderQuadrilaterals(className) {
-    (0, _util.assert)(this.quadrilaterals, "Missing quadrilaterals during rendering");
-
     for (const quadrilateral of this.quadrilaterals) {
       quadrilateral.className = className;
     }
@@ -15927,8 +15919,8 @@ var _svg = __w_pdfjs_require__(22);
 
 var _xfa_layer = __w_pdfjs_require__(20);
 
-const pdfjsVersion = '2.12.316';
-const pdfjsBuild = '2d63a99ba';
+const pdfjsVersion = '2.12.317';
+const pdfjsBuild = '0defd998c';
 {
   if (_is_node.isNodeJS) {
     const {
@@ -15962,3 +15954,4 @@ const pdfjsBuild = '2d63a99ba';
 /******/ })()
 ;
 });
+//# sourceMappingURL=pdf.js.map

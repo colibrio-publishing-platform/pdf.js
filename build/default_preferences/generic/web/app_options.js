@@ -232,7 +232,7 @@ var defaultOptions = {
 };
 {
   defaultOptions.disablePreferences = {
-    value: false,
+    value: true,
     kind: OptionKind.VIEWER
   };
   defaultOptions.locale = {

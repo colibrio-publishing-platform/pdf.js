@@ -64,7 +64,6 @@
     "yargs": "^17.3.0"
   },
   "scripts": {
-    "postinstall": "node -e \"require('child_process').execSync('cross-env PUPPETEER_PRODUCT=firefox node node_modules/puppeteer/install.js');\""
   },
   "repository": {
     "type": "git",

@@ -2469,4 +2469,4 @@ class AnnotationLayer {
   }
 }
 
-export { AnnotationLayer };
+export { AnnotationLayer, AnnotationElement };

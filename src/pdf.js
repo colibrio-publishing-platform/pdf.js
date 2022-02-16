@@ -144,8 +144,8 @@ export {
   PDFWorker,
   version,
   // From "./display/annotation_layer.js":
-  AnnotationLayer,
   AnnotationElement,
+  AnnotationLayer,
   // From "./display/worker_options.js":
   GlobalWorkerOptions,
   // From "./display/text_layer.js":

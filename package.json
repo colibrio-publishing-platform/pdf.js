@@ -63,8 +63,7 @@
     "wintersmith": "^2.5.0",
     "yargs": "^17.3.0"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git://github.com/mozilla/pdf.js.git"

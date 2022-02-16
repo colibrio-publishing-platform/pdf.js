@@ -60,7 +60,7 @@ import {
   setPDFNetworkStreamFactory,
   version,
 } from "./display/api.js";
-import { AnnotationLayer } from "./display/annotation_layer.js";
+import { AnnotationLayer, AnnotationElement } from "./display/annotation_layer.js";
 import { GlobalWorkerOptions } from "./display/worker_options.js";
 import { isNodeJS } from "./shared/is_node.js";
 import { renderTextLayer } from "./display/text_layer.js";
@@ -145,6 +145,7 @@ export {
   version,
   // From "./display/annotation_layer.js":
   AnnotationLayer,
+  AnnotationElement,
   // From "./display/worker_options.js":
   GlobalWorkerOptions,
   // From "./display/text_layer.js":

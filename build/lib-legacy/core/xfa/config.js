@@ -21,7 +21,7 @@
  */
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -44,11 +44,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
@@ -84,7 +84,7 @@ var Acrobat = /*#__PURE__*/function (_XFAObject) {
     return _this;
   }
 
-  return Acrobat;
+  return _createClass(Acrobat);
 }(_xfa_object.XFAObject);
 
 var Acrobat7 = /*#__PURE__*/function (_XFAObject2) {
@@ -102,7 +102,7 @@ var Acrobat7 = /*#__PURE__*/function (_XFAObject2) {
     return _this2;
   }
 
-  return Acrobat7;
+  return _createClass(Acrobat7);
 }(_xfa_object.XFAObject);
 
 var _ADBE_JSConsole = /*#__PURE__*/function (_OptionObject) {
@@ -116,7 +116,7 @@ var _ADBE_JSConsole = /*#__PURE__*/function (_OptionObject) {
     return _super3.call(this, CONFIG_NS_ID, "ADBE_JSConsole", ["delegate", "Enable", "Disable"]);
   }
 
-  return ADBE_JSConsole;
+  return _createClass(ADBE_JSConsole);
 }(_xfa_object.OptionObject);
 
 var _ADBE_JSDebugger = /*#__PURE__*/function (_OptionObject2) {
@@ -130,7 +130,7 @@ var _ADBE_JSDebugger = /*#__PURE__*/function (_OptionObject2) {
     return _super4.call(this, CONFIG_NS_ID, "ADBE_JSDebugger", ["delegate", "Enable", "Disable"]);
   }
 
-  return ADBE_JSDebugger;
+  return _createClass(ADBE_JSDebugger);
 }(_xfa_object.OptionObject);
 
 var AddSilentPrint = /*#__PURE__*/function (_Option) {
@@ -144,7 +144,7 @@ var AddSilentPrint = /*#__PURE__*/function (_Option) {
     return _super5.call(this, CONFIG_NS_ID, "addSilentPrint");
   }
 
-  return AddSilentPrint;
+  return _createClass(AddSilentPrint);
 }(_xfa_object.Option01);
 
 var AddViewerPreferences = /*#__PURE__*/function (_Option2) {
@@ -158,7 +158,7 @@ var AddViewerPreferences = /*#__PURE__*/function (_Option2) {
     return _super6.call(this, CONFIG_NS_ID, "addViewerPreferences");
   }
 
-  return AddViewerPreferences;
+  return _createClass(AddViewerPreferences);
 }(_xfa_object.Option01);
 
 var AdjustData = /*#__PURE__*/function (_Option3) {
@@ -172,7 +172,7 @@ var AdjustData = /*#__PURE__*/function (_Option3) {
     return _super7.call(this, CONFIG_NS_ID, "adjustData");
   }
 
-  return AdjustData;
+  return _createClass(AdjustData);
 }(_xfa_object.Option10);
 
 var AdobeExtensionLevel = /*#__PURE__*/function (_IntegerObject) {
@@ -188,7 +188,7 @@ var AdobeExtensionLevel = /*#__PURE__*/function (_IntegerObject) {
     });
   }
 
-  return AdobeExtensionLevel;
+  return _createClass(AdobeExtensionLevel);
 }(_xfa_object.IntegerObject);
 
 var Agent = /*#__PURE__*/function (_XFAObject3) {
@@ -207,7 +207,7 @@ var Agent = /*#__PURE__*/function (_XFAObject3) {
     return _this3;
   }
 
-  return Agent;
+  return _createClass(Agent);
 }(_xfa_object.XFAObject);
 
 var AlwaysEmbed = /*#__PURE__*/function (_ContentObject) {
@@ -221,7 +221,7 @@ var AlwaysEmbed = /*#__PURE__*/function (_ContentObject) {
     return _super10.call(this, CONFIG_NS_ID, "alwaysEmbed");
   }
 
-  return AlwaysEmbed;
+  return _createClass(AlwaysEmbed);
 }(_xfa_object.ContentObject);
 
 var Amd = /*#__PURE__*/function (_StringObject) {
@@ -235,7 +235,7 @@ var Amd = /*#__PURE__*/function (_StringObject) {
     return _super11.call(this, CONFIG_NS_ID, "amd");
   }
 
-  return Amd;
+  return _createClass(Amd);
 }(_xfa_object.StringObject);
 
 var Area = /*#__PURE__*/function (_XFAObject4) {
@@ -260,7 +260,7 @@ var Area = /*#__PURE__*/function (_XFAObject4) {
     return _this4;
   }
 
-  return Area;
+  return _createClass(Area);
 }(_xfa_object.XFAObject);
 
 var Attributes = /*#__PURE__*/function (_OptionObject3) {
@@ -274,7 +274,7 @@ var Attributes = /*#__PURE__*/function (_OptionObject3) {
     return _super13.call(this, CONFIG_NS_ID, "attributes", ["preserve", "delegate", "ignore"]);
   }
 
-  return Attributes;
+  return _createClass(Attributes);
 }(_xfa_object.OptionObject);
 
 var AutoSave = /*#__PURE__*/function (_OptionObject4) {
@@ -288,7 +288,7 @@ var AutoSave = /*#__PURE__*/function (_OptionObject4) {
     return _super14.call(this, CONFIG_NS_ID, "autoSave", ["disabled", "enabled"]);
   }
 
-  return AutoSave;
+  return _createClass(AutoSave);
 }(_xfa_object.OptionObject);
 
 var Base = /*#__PURE__*/function (_StringObject2) {
@@ -302,7 +302,7 @@ var Base = /*#__PURE__*/function (_StringObject2) {
     return _super15.call(this, CONFIG_NS_ID, "base");
   }
 
-  return Base;
+  return _createClass(Base);
 }(_xfa_object.StringObject);
 
 var BatchOutput = /*#__PURE__*/function (_XFAObject5) {
@@ -320,7 +320,7 @@ var BatchOutput = /*#__PURE__*/function (_XFAObject5) {
     return _this5;
   }
 
-  return BatchOutput;
+  return _createClass(BatchOutput);
 }(_xfa_object.XFAObject);
 
 var BehaviorOverride = /*#__PURE__*/function (_ContentObject2) {
@@ -363,7 +363,7 @@ var Cache = /*#__PURE__*/function (_XFAObject6) {
     return _this6;
   }
 
-  return Cache;
+  return _createClass(Cache);
 }(_xfa_object.XFAObject);
 
 var Change = /*#__PURE__*/function (_Option4) {
@@ -377,7 +377,7 @@ var Change = /*#__PURE__*/function (_Option4) {
     return _super19.call(this, CONFIG_NS_ID, "change");
   }
 
-  return Change;
+  return _createClass(Change);
 }(_xfa_object.Option01);
 
 var Common = /*#__PURE__*/function (_XFAObject7) {
@@ -403,7 +403,7 @@ var Common = /*#__PURE__*/function (_XFAObject7) {
     return _this7;
   }
 
-  return Common;
+  return _createClass(Common);
 }(_xfa_object.XFAObject);
 
 var Compress = /*#__PURE__*/function (_XFAObject8) {
@@ -421,7 +421,7 @@ var Compress = /*#__PURE__*/function (_XFAObject8) {
     return _this8;
   }
 
-  return Compress;
+  return _createClass(Compress);
 }(_xfa_object.XFAObject);
 
 var CompressLogicalStructure = /*#__PURE__*/function (_Option5) {
@@ -435,7 +435,7 @@ var CompressLogicalStructure = /*#__PURE__*/function (_Option5) {
     return _super22.call(this, CONFIG_NS_ID, "compressLogicalStructure");
   }
 
-  return CompressLogicalStructure;
+  return _createClass(CompressLogicalStructure);
 }(_xfa_object.Option01);
 
 var CompressObjectStream = /*#__PURE__*/function (_Option6) {
@@ -449,7 +449,7 @@ var CompressObjectStream = /*#__PURE__*/function (_Option6) {
     return _super23.call(this, CONFIG_NS_ID, "compressObjectStream");
   }
 
-  return CompressObjectStream;
+  return _createClass(CompressObjectStream);
 }(_xfa_object.Option10);
 
 var Compression = /*#__PURE__*/function (_XFAObject9) {
@@ -470,7 +470,7 @@ var Compression = /*#__PURE__*/function (_XFAObject9) {
     return _this9;
   }
 
-  return Compression;
+  return _createClass(Compression);
 }(_xfa_object.XFAObject);
 
 var Config = /*#__PURE__*/function (_XFAObject10) {
@@ -491,7 +491,7 @@ var Config = /*#__PURE__*/function (_XFAObject10) {
     return _this10;
   }
 
-  return Config;
+  return _createClass(Config);
 }(_xfa_object.XFAObject);
 
 var Conformance = /*#__PURE__*/function (_OptionObject5) {
@@ -505,7 +505,7 @@ var Conformance = /*#__PURE__*/function (_OptionObject5) {
     return _super26.call(this, CONFIG_NS_ID, "conformance", ["A", "B"]);
   }
 
-  return Conformance;
+  return _createClass(Conformance);
 }(_xfa_object.OptionObject);
 
 var ContentCopy = /*#__PURE__*/function (_Option7) {
@@ -519,7 +519,7 @@ var ContentCopy = /*#__PURE__*/function (_Option7) {
     return _super27.call(this, CONFIG_NS_ID, "contentCopy");
   }
 
-  return ContentCopy;
+  return _createClass(ContentCopy);
 }(_xfa_object.Option01);
 
 var Copies = /*#__PURE__*/function (_IntegerObject2) {
@@ -535,7 +535,7 @@ var Copies = /*#__PURE__*/function (_IntegerObject2) {
     });
   }
 
-  return Copies;
+  return _createClass(Copies);
 }(_xfa_object.IntegerObject);
 
 var Creator = /*#__PURE__*/function (_StringObject3) {
@@ -549,7 +549,7 @@ var Creator = /*#__PURE__*/function (_StringObject3) {
     return _super29.call(this, CONFIG_NS_ID, "creator");
   }
 
-  return Creator;
+  return _createClass(Creator);
 }(_xfa_object.StringObject);
 
 var CurrentPage = /*#__PURE__*/function (_IntegerObject3) {
@@ -565,7 +565,7 @@ var CurrentPage = /*#__PURE__*/function (_IntegerObject3) {
     });
   }
 
-  return CurrentPage;
+  return _createClass(CurrentPage);
 }(_xfa_object.IntegerObject);
 
 var Data = /*#__PURE__*/function (_XFAObject11) {
@@ -594,7 +594,7 @@ var Data = /*#__PURE__*/function (_XFAObject11) {
     return _this11;
   }
 
-  return Data;
+  return _createClass(Data);
 }(_xfa_object.XFAObject);
 
 var Debug = /*#__PURE__*/function (_XFAObject12) {
@@ -612,7 +612,7 @@ var Debug = /*#__PURE__*/function (_XFAObject12) {
     return _this12;
   }
 
-  return Debug;
+  return _createClass(Debug);
 }(_xfa_object.XFAObject);
 
 var DefaultTypeface = /*#__PURE__*/function (_ContentObject3) {
@@ -630,7 +630,7 @@ var DefaultTypeface = /*#__PURE__*/function (_ContentObject3) {
     return _this13;
   }
 
-  return DefaultTypeface;
+  return _createClass(DefaultTypeface);
 }(_xfa_object.ContentObject);
 
 var Destination = /*#__PURE__*/function (_OptionObject6) {
@@ -644,7 +644,7 @@ var Destination = /*#__PURE__*/function (_OptionObject6) {
     return _super34.call(this, CONFIG_NS_ID, "destination", ["pdf", "pcl", "ps", "webClient", "zpl"]);
   }
 
-  return Destination;
+  return _createClass(Destination);
 }(_xfa_object.OptionObject);
 
 var DocumentAssembly = /*#__PURE__*/function (_Option8) {
@@ -658,7 +658,7 @@ var DocumentAssembly = /*#__PURE__*/function (_Option8) {
     return _super35.call(this, CONFIG_NS_ID, "documentAssembly");
   }
 
-  return DocumentAssembly;
+  return _createClass(DocumentAssembly);
 }(_xfa_object.Option01);
 
 var Driver = /*#__PURE__*/function (_XFAObject13) {
@@ -678,7 +678,7 @@ var Driver = /*#__PURE__*/function (_XFAObject13) {
     return _this14;
   }
 
-  return Driver;
+  return _createClass(Driver);
 }(_xfa_object.XFAObject);
 
 var DuplexOption = /*#__PURE__*/function (_OptionObject7) {
@@ -692,7 +692,7 @@ var DuplexOption = /*#__PURE__*/function (_OptionObject7) {
     return _super37.call(this, CONFIG_NS_ID, "duplexOption", ["simplex", "duplexFlipLongEdge", "duplexFlipShortEdge"]);
   }
 
-  return DuplexOption;
+  return _createClass(DuplexOption);
 }(_xfa_object.OptionObject);
 
 var DynamicRender = /*#__PURE__*/function (_OptionObject8) {
@@ -706,7 +706,7 @@ var DynamicRender = /*#__PURE__*/function (_OptionObject8) {
     return _super38.call(this, CONFIG_NS_ID, "dynamicRender", ["forbidden", "required"]);
   }
 
-  return DynamicRender;
+  return _createClass(DynamicRender);
 }(_xfa_object.OptionObject);
 
 var Embed = /*#__PURE__*/function (_Option9) {
@@ -720,7 +720,7 @@ var Embed = /*#__PURE__*/function (_Option9) {
     return _super39.call(this, CONFIG_NS_ID, "embed");
   }
 
-  return Embed;
+  return _createClass(Embed);
 }(_xfa_object.Option01);
 
 var Encrypt = /*#__PURE__*/function (_Option10) {
@@ -734,7 +734,7 @@ var Encrypt = /*#__PURE__*/function (_Option10) {
     return _super40.call(this, CONFIG_NS_ID, "encrypt");
   }
 
-  return Encrypt;
+  return _createClass(Encrypt);
 }(_xfa_object.Option01);
 
 var Encryption = /*#__PURE__*/function (_XFAObject14) {
@@ -754,7 +754,7 @@ var Encryption = /*#__PURE__*/function (_XFAObject14) {
     return _this15;
   }
 
-  return Encryption;
+  return _createClass(Encryption);
 }(_xfa_object.XFAObject);
 
 var EncryptionLevel = /*#__PURE__*/function (_OptionObject9) {
@@ -768,7 +768,7 @@ var EncryptionLevel = /*#__PURE__*/function (_OptionObject9) {
     return _super42.call(this, CONFIG_NS_ID, "encryptionLevel", ["40bit", "128bit"]);
   }
 
-  return EncryptionLevel;
+  return _createClass(EncryptionLevel);
 }(_xfa_object.OptionObject);
 
 var Enforce = /*#__PURE__*/function (_StringObject4) {
@@ -782,7 +782,7 @@ var Enforce = /*#__PURE__*/function (_StringObject4) {
     return _super43.call(this, CONFIG_NS_ID, "enforce");
   }
 
-  return Enforce;
+  return _createClass(Enforce);
 }(_xfa_object.StringObject);
 
 var Equate = /*#__PURE__*/function (_XFAObject15) {
@@ -808,7 +808,7 @@ var Equate = /*#__PURE__*/function (_XFAObject15) {
     return _this16;
   }
 
-  return Equate;
+  return _createClass(Equate);
 }(_xfa_object.XFAObject);
 
 var EquateRange = /*#__PURE__*/function (_XFAObject16) {
@@ -908,7 +908,7 @@ var ExcludeNS = /*#__PURE__*/function (_StringObject5) {
     return _super47.call(this, CONFIG_NS_ID, "excludeNS");
   }
 
-  return ExcludeNS;
+  return _createClass(ExcludeNS);
 }(_xfa_object.StringObject);
 
 var FlipLabel = /*#__PURE__*/function (_OptionObject10) {
@@ -922,7 +922,7 @@ var FlipLabel = /*#__PURE__*/function (_OptionObject10) {
     return _super48.call(this, CONFIG_NS_ID, "flipLabel", ["usePrinterSetting", "on", "off"]);
   }
 
-  return FlipLabel;
+  return _createClass(FlipLabel);
 }(_xfa_object.OptionObject);
 
 var FontInfo = /*#__PURE__*/function (_XFAObject17) {
@@ -945,7 +945,7 @@ var FontInfo = /*#__PURE__*/function (_XFAObject17) {
     return _this18;
   }
 
-  return FontInfo;
+  return _createClass(FontInfo);
 }(_xfa_object.XFAObject);
 
 var FormFieldFilling = /*#__PURE__*/function (_Option11) {
@@ -959,7 +959,7 @@ var FormFieldFilling = /*#__PURE__*/function (_Option11) {
     return _super50.call(this, CONFIG_NS_ID, "formFieldFilling");
   }
 
-  return FormFieldFilling;
+  return _createClass(FormFieldFilling);
 }(_xfa_object.Option01);
 
 var GroupParent = /*#__PURE__*/function (_StringObject6) {
@@ -973,7 +973,7 @@ var GroupParent = /*#__PURE__*/function (_StringObject6) {
     return _super51.call(this, CONFIG_NS_ID, "groupParent");
   }
 
-  return GroupParent;
+  return _createClass(GroupParent);
 }(_xfa_object.StringObject);
 
 var IfEmpty = /*#__PURE__*/function (_OptionObject11) {
@@ -987,7 +987,7 @@ var IfEmpty = /*#__PURE__*/function (_OptionObject11) {
     return _super52.call(this, CONFIG_NS_ID, "ifEmpty", ["dataValue", "dataGroup", "ignore", "remove"]);
   }
 
-  return IfEmpty;
+  return _createClass(IfEmpty);
 }(_xfa_object.OptionObject);
 
 var IncludeXDPContent = /*#__PURE__*/function (_StringObject7) {
@@ -1001,7 +1001,7 @@ var IncludeXDPContent = /*#__PURE__*/function (_StringObject7) {
     return _super53.call(this, CONFIG_NS_ID, "includeXDPContent");
   }
 
-  return IncludeXDPContent;
+  return _createClass(IncludeXDPContent);
 }(_xfa_object.StringObject);
 
 var IncrementalLoad = /*#__PURE__*/function (_OptionObject12) {
@@ -1015,7 +1015,7 @@ var IncrementalLoad = /*#__PURE__*/function (_OptionObject12) {
     return _super54.call(this, CONFIG_NS_ID, "incrementalLoad", ["none", "forwardOnly"]);
   }
 
-  return IncrementalLoad;
+  return _createClass(IncrementalLoad);
 }(_xfa_object.OptionObject);
 
 var IncrementalMerge = /*#__PURE__*/function (_Option12) {
@@ -1029,7 +1029,7 @@ var IncrementalMerge = /*#__PURE__*/function (_Option12) {
     return _super55.call(this, CONFIG_NS_ID, "incrementalMerge");
   }
 
-  return IncrementalMerge;
+  return _createClass(IncrementalMerge);
 }(_xfa_object.Option01);
 
 var Interactive = /*#__PURE__*/function (_Option13) {
@@ -1043,7 +1043,7 @@ var Interactive = /*#__PURE__*/function (_Option13) {
     return _super56.call(this, CONFIG_NS_ID, "interactive");
   }
 
-  return Interactive;
+  return _createClass(Interactive);
 }(_xfa_object.Option01);
 
 var Jog = /*#__PURE__*/function (_OptionObject13) {
@@ -1057,7 +1057,7 @@ var Jog = /*#__PURE__*/function (_OptionObject13) {
     return _super57.call(this, CONFIG_NS_ID, "jog", ["usePrinterSetting", "none", "pageSet"]);
   }
 
-  return Jog;
+  return _createClass(Jog);
 }(_xfa_object.OptionObject);
 
 var LabelPrinter = /*#__PURE__*/function (_XFAObject18) {
@@ -1079,7 +1079,7 @@ var LabelPrinter = /*#__PURE__*/function (_XFAObject18) {
     return _this19;
   }
 
-  return LabelPrinter;
+  return _createClass(LabelPrinter);
 }(_xfa_object.XFAObject);
 
 var Layout = /*#__PURE__*/function (_OptionObject14) {
@@ -1093,7 +1093,7 @@ var Layout = /*#__PURE__*/function (_OptionObject14) {
     return _super59.call(this, CONFIG_NS_ID, "layout", ["paginate", "panel"]);
   }
 
-  return Layout;
+  return _createClass(Layout);
 }(_xfa_object.OptionObject);
 
 var Level = /*#__PURE__*/function (_IntegerObject4) {
@@ -1109,7 +1109,7 @@ var Level = /*#__PURE__*/function (_IntegerObject4) {
     });
   }
 
-  return Level;
+  return _createClass(Level);
 }(_xfa_object.IntegerObject);
 
 var Linearized = /*#__PURE__*/function (_Option14) {
@@ -1123,7 +1123,7 @@ var Linearized = /*#__PURE__*/function (_Option14) {
     return _super61.call(this, CONFIG_NS_ID, "linearized");
   }
 
-  return Linearized;
+  return _createClass(Linearized);
 }(_xfa_object.Option01);
 
 var Locale = /*#__PURE__*/function (_StringObject8) {
@@ -1137,7 +1137,7 @@ var Locale = /*#__PURE__*/function (_StringObject8) {
     return _super62.call(this, CONFIG_NS_ID, "locale");
   }
 
-  return Locale;
+  return _createClass(Locale);
 }(_xfa_object.StringObject);
 
 var LocaleSet = /*#__PURE__*/function (_StringObject9) {
@@ -1151,7 +1151,7 @@ var LocaleSet = /*#__PURE__*/function (_StringObject9) {
     return _super63.call(this, CONFIG_NS_ID, "localeSet");
   }
 
-  return LocaleSet;
+  return _createClass(LocaleSet);
 }(_xfa_object.StringObject);
 
 var Log = /*#__PURE__*/function (_XFAObject19) {
@@ -1172,7 +1172,7 @@ var Log = /*#__PURE__*/function (_XFAObject19) {
     return _this20;
   }
 
-  return Log;
+  return _createClass(Log);
 }(_xfa_object.XFAObject);
 
 var MapElement = /*#__PURE__*/function (_XFAObject20) {
@@ -1191,7 +1191,7 @@ var MapElement = /*#__PURE__*/function (_XFAObject20) {
     return _this21;
   }
 
-  return MapElement;
+  return _createClass(MapElement);
 }(_xfa_object.XFAObject);
 
 var MediumInfo = /*#__PURE__*/function (_XFAObject21) {
@@ -1209,7 +1209,7 @@ var MediumInfo = /*#__PURE__*/function (_XFAObject21) {
     return _this22;
   }
 
-  return MediumInfo;
+  return _createClass(MediumInfo);
 }(_xfa_object.XFAObject);
 
 var Message = /*#__PURE__*/function (_XFAObject22) {
@@ -1228,7 +1228,7 @@ var Message = /*#__PURE__*/function (_XFAObject22) {
     return _this23;
   }
 
-  return Message;
+  return _createClass(Message);
 }(_xfa_object.XFAObject);
 
 var Messaging = /*#__PURE__*/function (_XFAObject23) {
@@ -1246,7 +1246,7 @@ var Messaging = /*#__PURE__*/function (_XFAObject23) {
     return _this24;
   }
 
-  return Messaging;
+  return _createClass(Messaging);
 }(_xfa_object.XFAObject);
 
 var Mode = /*#__PURE__*/function (_OptionObject15) {
@@ -1260,7 +1260,7 @@ var Mode = /*#__PURE__*/function (_OptionObject15) {
     return _super69.call(this, CONFIG_NS_ID, "mode", ["append", "overwrite"]);
   }
 
-  return Mode;
+  return _createClass(Mode);
 }(_xfa_object.OptionObject);
 
 var ModifyAnnots = /*#__PURE__*/function (_Option15) {
@@ -1274,7 +1274,7 @@ var ModifyAnnots = /*#__PURE__*/function (_Option15) {
     return _super70.call(this, CONFIG_NS_ID, "modifyAnnots");
   }
 
-  return ModifyAnnots;
+  return _createClass(ModifyAnnots);
 }(_xfa_object.Option01);
 
 var MsgId = /*#__PURE__*/function (_IntegerObject5) {
@@ -1290,7 +1290,7 @@ var MsgId = /*#__PURE__*/function (_IntegerObject5) {
     });
   }
 
-  return MsgId;
+  return _createClass(MsgId);
 }(_xfa_object.IntegerObject);
 
 var NameAttr = /*#__PURE__*/function (_StringObject10) {
@@ -1304,7 +1304,7 @@ var NameAttr = /*#__PURE__*/function (_StringObject10) {
     return _super72.call(this, CONFIG_NS_ID, "nameAttr");
   }
 
-  return NameAttr;
+  return _createClass(NameAttr);
 }(_xfa_object.StringObject);
 
 var NeverEmbed = /*#__PURE__*/function (_ContentObject5) {
@@ -1318,7 +1318,7 @@ var NeverEmbed = /*#__PURE__*/function (_ContentObject5) {
     return _super73.call(this, CONFIG_NS_ID, "neverEmbed");
   }
 
-  return NeverEmbed;
+  return _createClass(NeverEmbed);
 }(_xfa_object.ContentObject);
 
 var NumberOfCopies = /*#__PURE__*/function (_IntegerObject6) {
@@ -1334,7 +1334,7 @@ var NumberOfCopies = /*#__PURE__*/function (_IntegerObject6) {
     });
   }
 
-  return NumberOfCopies;
+  return _createClass(NumberOfCopies);
 }(_xfa_object.IntegerObject);
 
 var OpenAction = /*#__PURE__*/function (_XFAObject24) {
@@ -1352,7 +1352,7 @@ var OpenAction = /*#__PURE__*/function (_XFAObject24) {
     return _this25;
   }
 
-  return OpenAction;
+  return _createClass(OpenAction);
 }(_xfa_object.XFAObject);
 
 var Output = /*#__PURE__*/function (_XFAObject25) {
@@ -1372,7 +1372,7 @@ var Output = /*#__PURE__*/function (_XFAObject25) {
     return _this26;
   }
 
-  return Output;
+  return _createClass(Output);
 }(_xfa_object.XFAObject);
 
 var OutputBin = /*#__PURE__*/function (_StringObject11) {
@@ -1386,7 +1386,7 @@ var OutputBin = /*#__PURE__*/function (_StringObject11) {
     return _super77.call(this, CONFIG_NS_ID, "outputBin");
   }
 
-  return OutputBin;
+  return _createClass(OutputBin);
 }(_xfa_object.StringObject);
 
 var OutputXSL = /*#__PURE__*/function (_XFAObject26) {
@@ -1404,7 +1404,7 @@ var OutputXSL = /*#__PURE__*/function (_XFAObject26) {
     return _this27;
   }
 
-  return OutputXSL;
+  return _createClass(OutputXSL);
 }(_xfa_object.XFAObject);
 
 var Overprint = /*#__PURE__*/function (_OptionObject16) {
@@ -1418,7 +1418,7 @@ var Overprint = /*#__PURE__*/function (_OptionObject16) {
     return _super79.call(this, CONFIG_NS_ID, "overprint", ["none", "both", "draw", "field"]);
   }
 
-  return Overprint;
+  return _createClass(Overprint);
 }(_xfa_object.OptionObject);
 
 var Packets = /*#__PURE__*/function (_StringObject12) {
@@ -1476,7 +1476,7 @@ var PageOffset = /*#__PURE__*/function (_XFAObject27) {
     return _this28;
   }
 
-  return PageOffset;
+  return _createClass(PageOffset);
 }(_xfa_object.XFAObject);
 
 var PageRange = /*#__PURE__*/function (_StringObject13) {
@@ -1521,7 +1521,7 @@ var Pagination = /*#__PURE__*/function (_OptionObject17) {
     return _super83.call(this, CONFIG_NS_ID, "pagination", ["simplex", "duplexShortEdge", "duplexLongEdge"]);
   }
 
-  return Pagination;
+  return _createClass(Pagination);
 }(_xfa_object.OptionObject);
 
 var PaginationOverride = /*#__PURE__*/function (_OptionObject18) {
@@ -1535,7 +1535,7 @@ var PaginationOverride = /*#__PURE__*/function (_OptionObject18) {
     return _super84.call(this, CONFIG_NS_ID, "paginationOverride", ["none", "forceDuplex", "forceDuplexLongEdge", "forceDuplexShortEdge", "forceSimplex"]);
   }
 
-  return PaginationOverride;
+  return _createClass(PaginationOverride);
 }(_xfa_object.OptionObject);
 
 var Part = /*#__PURE__*/function (_IntegerObject7) {
@@ -1551,7 +1551,7 @@ var Part = /*#__PURE__*/function (_IntegerObject7) {
     });
   }
 
-  return Part;
+  return _createClass(Part);
 }(_xfa_object.IntegerObject);
 
 var Pcl = /*#__PURE__*/function (_XFAObject28) {
@@ -1577,7 +1577,7 @@ var Pcl = /*#__PURE__*/function (_XFAObject28) {
     return _this29;
   }
 
-  return Pcl;
+  return _createClass(Pcl);
 }(_xfa_object.XFAObject);
 
 var Pdf = /*#__PURE__*/function (_XFAObject29) {
@@ -1614,7 +1614,7 @@ var Pdf = /*#__PURE__*/function (_XFAObject29) {
     return _this30;
   }
 
-  return Pdf;
+  return _createClass(Pdf);
 }(_xfa_object.XFAObject);
 
 var Pdfa = /*#__PURE__*/function (_XFAObject30) {
@@ -1635,7 +1635,7 @@ var Pdfa = /*#__PURE__*/function (_XFAObject30) {
     return _this31;
   }
 
-  return Pdfa;
+  return _createClass(Pdfa);
 }(_xfa_object.XFAObject);
 
 var Permissions = /*#__PURE__*/function (_XFAObject31) {
@@ -1661,7 +1661,7 @@ var Permissions = /*#__PURE__*/function (_XFAObject31) {
     return _this32;
   }
 
-  return Permissions;
+  return _createClass(Permissions);
 }(_xfa_object.XFAObject);
 
 var PickTrayByPDFSize = /*#__PURE__*/function (_Option16) {
@@ -1675,7 +1675,7 @@ var PickTrayByPDFSize = /*#__PURE__*/function (_Option16) {
     return _super90.call(this, CONFIG_NS_ID, "pickTrayByPDFSize");
   }
 
-  return PickTrayByPDFSize;
+  return _createClass(PickTrayByPDFSize);
 }(_xfa_object.Option01);
 
 var Picture = /*#__PURE__*/function (_StringObject14) {
@@ -1689,7 +1689,7 @@ var Picture = /*#__PURE__*/function (_StringObject14) {
     return _super91.call(this, CONFIG_NS_ID, "picture");
   }
 
-  return Picture;
+  return _createClass(Picture);
 }(_xfa_object.StringObject);
 
 var PlaintextMetadata = /*#__PURE__*/function (_Option17) {
@@ -1703,7 +1703,7 @@ var PlaintextMetadata = /*#__PURE__*/function (_Option17) {
     return _super92.call(this, CONFIG_NS_ID, "plaintextMetadata");
   }
 
-  return PlaintextMetadata;
+  return _createClass(PlaintextMetadata);
 }(_xfa_object.Option01);
 
 var Presence = /*#__PURE__*/function (_OptionObject19) {
@@ -1717,7 +1717,7 @@ var Presence = /*#__PURE__*/function (_OptionObject19) {
     return _super93.call(this, CONFIG_NS_ID, "presence", ["preserve", "dissolve", "dissolveStructure", "ignore", "remove"]);
   }
 
-  return Presence;
+  return _createClass(Presence);
 }(_xfa_object.OptionObject);
 
 var Present = /*#__PURE__*/function (_XFAObject32) {
@@ -1756,7 +1756,7 @@ var Present = /*#__PURE__*/function (_XFAObject32) {
     return _this33;
   }
 
-  return Present;
+  return _createClass(Present);
 }(_xfa_object.XFAObject);
 
 var Print = /*#__PURE__*/function (_Option18) {
@@ -1770,7 +1770,7 @@ var Print = /*#__PURE__*/function (_Option18) {
     return _super95.call(this, CONFIG_NS_ID, "print");
   }
 
-  return Print;
+  return _createClass(Print);
 }(_xfa_object.Option01);
 
 var PrintHighQuality = /*#__PURE__*/function (_Option19) {
@@ -1784,7 +1784,7 @@ var PrintHighQuality = /*#__PURE__*/function (_Option19) {
     return _super96.call(this, CONFIG_NS_ID, "printHighQuality");
   }
 
-  return PrintHighQuality;
+  return _createClass(PrintHighQuality);
 }(_xfa_object.Option01);
 
 var PrintScaling = /*#__PURE__*/function (_OptionObject20) {
@@ -1798,7 +1798,7 @@ var PrintScaling = /*#__PURE__*/function (_OptionObject20) {
     return _super97.call(this, CONFIG_NS_ID, "printScaling", ["appdefault", "noScaling"]);
   }
 
-  return PrintScaling;
+  return _createClass(PrintScaling);
 }(_xfa_object.OptionObject);
 
 var PrinterName = /*#__PURE__*/function (_StringObject15) {
@@ -1812,7 +1812,7 @@ var PrinterName = /*#__PURE__*/function (_StringObject15) {
     return _super98.call(this, CONFIG_NS_ID, "printerName");
   }
 
-  return PrinterName;
+  return _createClass(PrinterName);
 }(_xfa_object.StringObject);
 
 var Producer = /*#__PURE__*/function (_StringObject16) {
@@ -1826,7 +1826,7 @@ var Producer = /*#__PURE__*/function (_StringObject16) {
     return _super99.call(this, CONFIG_NS_ID, "producer");
   }
 
-  return Producer;
+  return _createClass(Producer);
 }(_xfa_object.StringObject);
 
 var Ps = /*#__PURE__*/function (_XFAObject33) {
@@ -1851,7 +1851,7 @@ var Ps = /*#__PURE__*/function (_XFAObject33) {
     return _this34;
   }
 
-  return Ps;
+  return _createClass(Ps);
 }(_xfa_object.XFAObject);
 
 var Range = /*#__PURE__*/function (_ContentObject6) {
@@ -1972,7 +1972,7 @@ var RenderPolicy = /*#__PURE__*/function (_OptionObject21) {
     return _super105.call(this, CONFIG_NS_ID, "renderPolicy", ["server", "client"]);
   }
 
-  return RenderPolicy;
+  return _createClass(RenderPolicy);
 }(_xfa_object.OptionObject);
 
 var RunScripts = /*#__PURE__*/function (_OptionObject22) {
@@ -1986,7 +1986,7 @@ var RunScripts = /*#__PURE__*/function (_OptionObject22) {
     return _super106.call(this, CONFIG_NS_ID, "runScripts", ["both", "client", "none", "server"]);
   }
 
-  return RunScripts;
+  return _createClass(RunScripts);
 }(_xfa_object.OptionObject);
 
 var Script = /*#__PURE__*/function (_XFAObject34) {
@@ -2006,7 +2006,7 @@ var Script = /*#__PURE__*/function (_XFAObject34) {
     return _this35;
   }
 
-  return Script;
+  return _createClass(Script);
 }(_xfa_object.XFAObject);
 
 var ScriptModel = /*#__PURE__*/function (_OptionObject23) {
@@ -2020,7 +2020,7 @@ var ScriptModel = /*#__PURE__*/function (_OptionObject23) {
     return _super108.call(this, CONFIG_NS_ID, "scriptModel", ["XFA", "none"]);
   }
 
-  return ScriptModel;
+  return _createClass(ScriptModel);
 }(_xfa_object.OptionObject);
 
 var Severity = /*#__PURE__*/function (_OptionObject24) {
@@ -2034,7 +2034,7 @@ var Severity = /*#__PURE__*/function (_OptionObject24) {
     return _super109.call(this, CONFIG_NS_ID, "severity", ["ignore", "error", "information", "trace", "warning"]);
   }
 
-  return Severity;
+  return _createClass(Severity);
 }(_xfa_object.OptionObject);
 
 var SilentPrint = /*#__PURE__*/function (_XFAObject35) {
@@ -2053,7 +2053,7 @@ var SilentPrint = /*#__PURE__*/function (_XFAObject35) {
     return _this36;
   }
 
-  return SilentPrint;
+  return _createClass(SilentPrint);
 }(_xfa_object.XFAObject);
 
 var Staple = /*#__PURE__*/function (_XFAObject36) {
@@ -2071,7 +2071,7 @@ var Staple = /*#__PURE__*/function (_XFAObject36) {
     return _this37;
   }
 
-  return Staple;
+  return _createClass(Staple);
 }(_xfa_object.XFAObject);
 
 var StartNode = /*#__PURE__*/function (_StringObject17) {
@@ -2085,7 +2085,7 @@ var StartNode = /*#__PURE__*/function (_StringObject17) {
     return _super112.call(this, CONFIG_NS_ID, "startNode");
   }
 
-  return StartNode;
+  return _createClass(StartNode);
 }(_xfa_object.StringObject);
 
 var StartPage = /*#__PURE__*/function (_IntegerObject8) {
@@ -2101,7 +2101,7 @@ var StartPage = /*#__PURE__*/function (_IntegerObject8) {
     });
   }
 
-  return StartPage;
+  return _createClass(StartPage);
 }(_xfa_object.IntegerObject);
 
 var SubmitFormat = /*#__PURE__*/function (_OptionObject25) {
@@ -2115,7 +2115,7 @@ var SubmitFormat = /*#__PURE__*/function (_OptionObject25) {
     return _super114.call(this, CONFIG_NS_ID, "submitFormat", ["html", "delegate", "fdf", "xml", "pdf"]);
   }
 
-  return SubmitFormat;
+  return _createClass(SubmitFormat);
 }(_xfa_object.OptionObject);
 
 var SubmitUrl = /*#__PURE__*/function (_StringObject18) {
@@ -2129,7 +2129,7 @@ var SubmitUrl = /*#__PURE__*/function (_StringObject18) {
     return _super115.call(this, CONFIG_NS_ID, "submitUrl");
   }
 
-  return SubmitUrl;
+  return _createClass(SubmitUrl);
 }(_xfa_object.StringObject);
 
 var SubsetBelow = /*#__PURE__*/function (_IntegerObject9) {
@@ -2145,7 +2145,7 @@ var SubsetBelow = /*#__PURE__*/function (_IntegerObject9) {
     });
   }
 
-  return SubsetBelow;
+  return _createClass(SubsetBelow);
 }(_xfa_object.IntegerObject);
 
 var SuppressBanner = /*#__PURE__*/function (_Option20) {
@@ -2159,7 +2159,7 @@ var SuppressBanner = /*#__PURE__*/function (_Option20) {
     return _super117.call(this, CONFIG_NS_ID, "suppressBanner");
   }
 
-  return SuppressBanner;
+  return _createClass(SuppressBanner);
 }(_xfa_object.Option01);
 
 var Tagged = /*#__PURE__*/function (_Option21) {
@@ -2173,7 +2173,7 @@ var Tagged = /*#__PURE__*/function (_Option21) {
     return _super118.call(this, CONFIG_NS_ID, "tagged");
   }
 
-  return Tagged;
+  return _createClass(Tagged);
 }(_xfa_object.Option01);
 
 var Template = /*#__PURE__*/function (_XFAObject37) {
@@ -2195,7 +2195,7 @@ var Template = /*#__PURE__*/function (_XFAObject37) {
     return _this38;
   }
 
-  return Template;
+  return _createClass(Template);
 }(_xfa_object.XFAObject);
 
 var Threshold = /*#__PURE__*/function (_OptionObject26) {
@@ -2209,7 +2209,7 @@ var Threshold = /*#__PURE__*/function (_OptionObject26) {
     return _super120.call(this, CONFIG_NS_ID, "threshold", ["trace", "error", "information", "warning"]);
   }
 
-  return Threshold;
+  return _createClass(Threshold);
 }(_xfa_object.OptionObject);
 
 var To = /*#__PURE__*/function (_OptionObject27) {
@@ -2223,7 +2223,7 @@ var To = /*#__PURE__*/function (_OptionObject27) {
     return _super121.call(this, CONFIG_NS_ID, "to", ["null", "memory", "stderr", "stdout", "system", "uri"]);
   }
 
-  return To;
+  return _createClass(To);
 }(_xfa_object.OptionObject);
 
 var TemplateCache = /*#__PURE__*/function (_XFAObject38) {
@@ -2247,7 +2247,7 @@ var TemplateCache = /*#__PURE__*/function (_XFAObject38) {
     return _this39;
   }
 
-  return TemplateCache;
+  return _createClass(TemplateCache);
 }(_xfa_object.XFAObject);
 
 var Trace = /*#__PURE__*/function (_XFAObject39) {
@@ -2265,7 +2265,7 @@ var Trace = /*#__PURE__*/function (_XFAObject39) {
     return _this40;
   }
 
-  return Trace;
+  return _createClass(Trace);
 }(_xfa_object.XFAObject);
 
 var Transform = /*#__PURE__*/function (_XFAObject40) {
@@ -2289,7 +2289,7 @@ var Transform = /*#__PURE__*/function (_XFAObject40) {
     return _this41;
   }
 
-  return Transform;
+  return _createClass(Transform);
 }(_xfa_object.XFAObject);
 
 var Type = /*#__PURE__*/function (_OptionObject28) {
@@ -2303,7 +2303,7 @@ var Type = /*#__PURE__*/function (_OptionObject28) {
     return _super125.call(this, CONFIG_NS_ID, "type", ["none", "ascii85", "asciiHex", "ccittfax", "flate", "lzw", "runLength", "native", "xdp", "mergedXDP"]);
   }
 
-  return Type;
+  return _createClass(Type);
 }(_xfa_object.OptionObject);
 
 var Uri = /*#__PURE__*/function (_StringObject19) {
@@ -2317,7 +2317,7 @@ var Uri = /*#__PURE__*/function (_StringObject19) {
     return _super126.call(this, CONFIG_NS_ID, "uri");
   }
 
-  return Uri;
+  return _createClass(Uri);
 }(_xfa_object.StringObject);
 
 var Validate = /*#__PURE__*/function (_OptionObject29) {
@@ -2331,7 +2331,7 @@ var Validate = /*#__PURE__*/function (_OptionObject29) {
     return _super127.call(this, CONFIG_NS_ID, "validate", ["preSubmit", "prePrint", "preExecute", "preSave"]);
   }
 
-  return Validate;
+  return _createClass(Validate);
 }(_xfa_object.OptionObject);
 
 var ValidateApprovalSignatures = /*#__PURE__*/function (_ContentObject10) {
@@ -2368,7 +2368,7 @@ var ValidationMessaging = /*#__PURE__*/function (_OptionObject30) {
     return _super129.call(this, CONFIG_NS_ID, "validationMessaging", ["allMessagesIndividually", "allMessagesTogether", "firstMessageOnly", "noMessages"]);
   }
 
-  return ValidationMessaging;
+  return _createClass(ValidationMessaging);
 }(_xfa_object.OptionObject);
 
 var Version = /*#__PURE__*/function (_OptionObject31) {
@@ -2382,7 +2382,7 @@ var Version = /*#__PURE__*/function (_OptionObject31) {
     return _super130.call(this, CONFIG_NS_ID, "version", ["1.7", "1.6", "1.5", "1.4", "1.3", "1.2"]);
   }
 
-  return Version;
+  return _createClass(Version);
 }(_xfa_object.OptionObject);
 
 var VersionControl = /*#__PURE__*/function (_XFAObject41) {
@@ -2402,7 +2402,7 @@ var VersionControl = /*#__PURE__*/function (_XFAObject41) {
     return _this42;
   }
 
-  return VersionControl;
+  return _createClass(VersionControl);
 }(_xfa_object.XFAObject);
 
 var ViewerPreferences = /*#__PURE__*/function (_XFAObject42) {
@@ -2428,7 +2428,7 @@ var ViewerPreferences = /*#__PURE__*/function (_XFAObject42) {
     return _this43;
   }
 
-  return ViewerPreferences;
+  return _createClass(ViewerPreferences);
 }(_xfa_object.XFAObject);
 
 var WebClient = /*#__PURE__*/function (_XFAObject43) {
@@ -2448,7 +2448,7 @@ var WebClient = /*#__PURE__*/function (_XFAObject43) {
     return _this44;
   }
 
-  return WebClient;
+  return _createClass(WebClient);
 }(_xfa_object.XFAObject);
 
 var Whitespace = /*#__PURE__*/function (_OptionObject32) {
@@ -2462,7 +2462,7 @@ var Whitespace = /*#__PURE__*/function (_OptionObject32) {
     return _super134.call(this, CONFIG_NS_ID, "whitespace", ["preserve", "ltrim", "normalize", "rtrim", "trim"]);
   }
 
-  return Whitespace;
+  return _createClass(Whitespace);
 }(_xfa_object.OptionObject);
 
 var Window = /*#__PURE__*/function (_ContentObject11) {
@@ -2517,7 +2517,7 @@ var Xdc = /*#__PURE__*/function (_XFAObject44) {
     return _this45;
   }
 
-  return Xdc;
+  return _createClass(Xdc);
 }(_xfa_object.XFAObject);
 
 var Xdp = /*#__PURE__*/function (_XFAObject45) {
@@ -2535,7 +2535,7 @@ var Xdp = /*#__PURE__*/function (_XFAObject45) {
     return _this46;
   }
 
-  return Xdp;
+  return _createClass(Xdp);
 }(_xfa_object.XFAObject);
 
 var Xsl = /*#__PURE__*/function (_XFAObject46) {
@@ -2554,7 +2554,7 @@ var Xsl = /*#__PURE__*/function (_XFAObject46) {
     return _this47;
   }
 
-  return Xsl;
+  return _createClass(Xsl);
 }(_xfa_object.XFAObject);
 
 var Zpl = /*#__PURE__*/function (_XFAObject47) {
@@ -2576,7 +2576,7 @@ var Zpl = /*#__PURE__*/function (_XFAObject47) {
     return _this48;
   }
 
-  return Zpl;
+  return _createClass(Zpl);
 }(_xfa_object.XFAObject);
 
 var ConfigNamespace = /*#__PURE__*/function () {

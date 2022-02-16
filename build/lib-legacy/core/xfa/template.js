@@ -50,9 +50,9 @@ var _som = require("./som.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
-function _get(target, property, receiver) { if (typeof Reflect !== "undefined" && Reflect.get) { _get = Reflect.get; } else { _get = function _get(target, property, receiver) { var base = _superPropBase(target, property); if (!base) return; var desc = Object.getOwnPropertyDescriptor(base, property); if (desc.get) { return desc.get.call(receiver); } return desc.value; }; } return _get(target, property, receiver || target); }
+function _get() { if (typeof Reflect !== "undefined" && Reflect.get) { _get = Reflect.get; } else { _get = function _get(target, property, receiver) { var base = _superPropBase(target, property); if (!base) return; var desc = Object.getOwnPropertyDescriptor(base, property); if (desc.get) { return desc.get.call(arguments.length < 3 ? target : receiver); } return desc.value; }; } return _get.apply(this, arguments); }
 
 function _superPropBase(object, property) { while (!Object.prototype.hasOwnProperty.call(object, property)) { object = _getPrototypeOf(object); if (object === null) break; } return object; }
 
@@ -66,11 +66,11 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
@@ -462,7 +462,7 @@ var AppearanceFilter = /*#__PURE__*/function (_StringObject) {
     return _this;
   }
 
-  return AppearanceFilter;
+  return _createClass(AppearanceFilter);
 }(_xfa_object.StringObject);
 
 var Arc = /*#__PURE__*/function (_XFAObject) {
@@ -845,7 +845,7 @@ var Barcode = /*#__PURE__*/function (_XFAObject4) {
     return _this5;
   }
 
-  return Barcode;
+  return _createClass(Barcode);
 }(_xfa_object.XFAObject);
 
 var Bind = /*#__PURE__*/function (_XFAObject5) {
@@ -865,7 +865,7 @@ var Bind = /*#__PURE__*/function (_XFAObject5) {
     return _this6;
   }
 
-  return Bind;
+  return _createClass(Bind);
 }(_xfa_object.XFAObject);
 
 var BindItems = /*#__PURE__*/function (_XFAObject6) {
@@ -886,7 +886,7 @@ var BindItems = /*#__PURE__*/function (_XFAObject6) {
     return _this7;
   }
 
-  return BindItems;
+  return _createClass(BindItems);
 }(_xfa_object.XFAObject);
 
 exports.BindItems = BindItems;
@@ -910,7 +910,7 @@ var Bookend = /*#__PURE__*/function (_XFAObject7) {
     return _this8;
   }
 
-  return Bookend;
+  return _createClass(Bookend);
 }(_xfa_object.XFAObject);
 
 var BooleanElement = /*#__PURE__*/function (_Option) {
@@ -1108,7 +1108,7 @@ var Break = /*#__PURE__*/function (_XFAObject9) {
     return _this11;
   }
 
-  return Break;
+  return _createClass(Break);
 }(_xfa_object.XFAObject);
 
 var BreakAfter = /*#__PURE__*/function (_XFAObject10) {
@@ -1140,7 +1140,7 @@ var BreakAfter = /*#__PURE__*/function (_XFAObject10) {
     return _this12;
   }
 
-  return BreakAfter;
+  return _createClass(BreakAfter);
 }(_xfa_object.XFAObject);
 
 var BreakBefore = /*#__PURE__*/function (_XFAObject11) {
@@ -1288,7 +1288,7 @@ var Calculate = /*#__PURE__*/function (_XFAObject13) {
     return _this15;
   }
 
-  return Calculate;
+  return _createClass(Calculate);
 }(_xfa_object.XFAObject);
 
 var Caption = /*#__PURE__*/function (_XFAObject14) {
@@ -1465,7 +1465,7 @@ var Certificate = /*#__PURE__*/function (_StringObject2) {
     return _this17;
   }
 
-  return Certificate;
+  return _createClass(Certificate);
 }(_xfa_object.StringObject);
 
 var Certificates = /*#__PURE__*/function (_XFAObject15) {
@@ -1494,7 +1494,7 @@ var Certificates = /*#__PURE__*/function (_XFAObject15) {
     return _this18;
   }
 
-  return Certificates;
+  return _createClass(Certificates);
 }(_xfa_object.XFAObject);
 
 var CheckButton = /*#__PURE__*/function (_XFAObject16) {
@@ -1767,7 +1767,7 @@ var Comb = /*#__PURE__*/function (_XFAObject19) {
     return _this22;
   }
 
-  return Comb;
+  return _createClass(Comb);
 }(_xfa_object.XFAObject);
 
 var Connect = /*#__PURE__*/function (_XFAObject20) {
@@ -1791,7 +1791,7 @@ var Connect = /*#__PURE__*/function (_XFAObject20) {
     return _this23;
   }
 
-  return Connect;
+  return _createClass(Connect);
 }(_xfa_object.XFAObject);
 
 var ContentArea = /*#__PURE__*/function (_XFAObject21) {
@@ -2084,7 +2084,7 @@ var DefaultUi = /*#__PURE__*/function (_XFAObject24) {
     return _this30;
   }
 
-  return DefaultUi;
+  return _createClass(DefaultUi);
 }(_xfa_object.XFAObject);
 
 var Desc = /*#__PURE__*/function (_XFAObject25) {
@@ -2114,7 +2114,7 @@ var Desc = /*#__PURE__*/function (_XFAObject25) {
     return _this31;
   }
 
-  return Desc;
+  return _createClass(Desc);
 }(_xfa_object.XFAObject);
 
 var DigestMethod = /*#__PURE__*/function (_OptionObject) {
@@ -2134,7 +2134,7 @@ var DigestMethod = /*#__PURE__*/function (_OptionObject) {
     return _this32;
   }
 
-  return DigestMethod;
+  return _createClass(DigestMethod);
 }(_xfa_object.OptionObject);
 
 var DigestMethods = /*#__PURE__*/function (_XFAObject26) {
@@ -2156,7 +2156,7 @@ var DigestMethods = /*#__PURE__*/function (_XFAObject26) {
     return _this33;
   }
 
-  return DigestMethods;
+  return _createClass(DigestMethods);
 }(_xfa_object.XFAObject);
 
 var Draw = /*#__PURE__*/function (_XFAObject27) {
@@ -2439,7 +2439,7 @@ var Encoding = /*#__PURE__*/function (_OptionObject2) {
     return _this36;
   }
 
-  return Encoding;
+  return _createClass(Encoding);
 }(_xfa_object.OptionObject);
 
 var Encodings = /*#__PURE__*/function (_XFAObject29) {
@@ -2461,7 +2461,7 @@ var Encodings = /*#__PURE__*/function (_XFAObject29) {
     return _this37;
   }
 
-  return Encodings;
+  return _createClass(Encodings);
 }(_xfa_object.XFAObject);
 
 var Encrypt = /*#__PURE__*/function (_XFAObject30) {
@@ -2482,7 +2482,7 @@ var Encrypt = /*#__PURE__*/function (_XFAObject30) {
     return _this38;
   }
 
-  return Encrypt;
+  return _createClass(Encrypt);
 }(_xfa_object.XFAObject);
 
 var EncryptData = /*#__PURE__*/function (_XFAObject31) {
@@ -2506,7 +2506,7 @@ var EncryptData = /*#__PURE__*/function (_XFAObject31) {
     return _this39;
   }
 
-  return EncryptData;
+  return _createClass(EncryptData);
 }(_xfa_object.XFAObject);
 
 var Encryption = /*#__PURE__*/function (_XFAObject32) {
@@ -2528,7 +2528,7 @@ var Encryption = /*#__PURE__*/function (_XFAObject32) {
     return _this40;
   }
 
-  return Encryption;
+  return _createClass(Encryption);
 }(_xfa_object.XFAObject);
 
 var EncryptionMethod = /*#__PURE__*/function (_OptionObject3) {
@@ -2548,7 +2548,7 @@ var EncryptionMethod = /*#__PURE__*/function (_OptionObject3) {
     return _this41;
   }
 
-  return EncryptionMethod;
+  return _createClass(EncryptionMethod);
 }(_xfa_object.OptionObject);
 
 var EncryptionMethods = /*#__PURE__*/function (_XFAObject33) {
@@ -2570,7 +2570,7 @@ var EncryptionMethods = /*#__PURE__*/function (_XFAObject33) {
     return _this42;
   }
 
-  return EncryptionMethods;
+  return _createClass(EncryptionMethods);
 }(_xfa_object.XFAObject);
 
 var Event = /*#__PURE__*/function (_XFAObject34) {
@@ -2600,7 +2600,7 @@ var Event = /*#__PURE__*/function (_XFAObject34) {
     return _this43;
   }
 
-  return Event;
+  return _createClass(Event);
 }(_xfa_object.XFAObject);
 
 var ExData = /*#__PURE__*/function (_ContentObject4) {
@@ -2700,7 +2700,7 @@ var ExObject = /*#__PURE__*/function (_XFAObject35) {
     return _this45;
   }
 
-  return ExObject;
+  return _createClass(ExObject);
 }(_xfa_object.XFAObject);
 
 var ExclGroup = /*#__PURE__*/function (_XFAObject36) {
@@ -3025,7 +3025,7 @@ var Execute = /*#__PURE__*/function (_XFAObject37) {
     return _this47;
   }
 
-  return Execute;
+  return _createClass(Execute);
 }(_xfa_object.XFAObject);
 
 var Extras = /*#__PURE__*/function (_XFAObject38) {
@@ -3057,7 +3057,7 @@ var Extras = /*#__PURE__*/function (_XFAObject38) {
     return _this48;
   }
 
-  return Extras;
+  return _createClass(Extras);
 }(_xfa_object.XFAObject);
 
 var Field = /*#__PURE__*/function (_XFAObject39) {
@@ -3618,7 +3618,7 @@ var Filter = /*#__PURE__*/function (_XFAObject41) {
     return _this51;
   }
 
-  return Filter;
+  return _createClass(Filter);
 }(_xfa_object.XFAObject);
 
 var Float = /*#__PURE__*/function (_ContentObject5) {
@@ -3804,7 +3804,7 @@ var Format = /*#__PURE__*/function (_XFAObject43) {
     return _this54;
   }
 
-  return Format;
+  return _createClass(Format);
 }(_xfa_object.XFAObject);
 
 var Handler = /*#__PURE__*/function (_StringObject3) {
@@ -3825,7 +3825,7 @@ var Handler = /*#__PURE__*/function (_StringObject3) {
     return _this55;
   }
 
-  return Handler;
+  return _createClass(Handler);
 }(_xfa_object.StringObject);
 
 var Hyphenation = /*#__PURE__*/function (_XFAObject44) {
@@ -3887,7 +3887,7 @@ var Hyphenation = /*#__PURE__*/function (_XFAObject44) {
     return _this56;
   }
 
-  return Hyphenation;
+  return _createClass(Hyphenation);
 }(_xfa_object.XFAObject);
 
 var Image = /*#__PURE__*/function (_StringObject4) {
@@ -4103,7 +4103,7 @@ var Issuers = /*#__PURE__*/function (_XFAObject46) {
     return _this60;
   }
 
-  return Issuers;
+  return _createClass(Issuers);
 }(_xfa_object.XFAObject);
 
 var Items = /*#__PURE__*/function (_XFAObject47) {
@@ -4193,7 +4193,7 @@ var Keep = /*#__PURE__*/function (_XFAObject48) {
     return _this62;
   }
 
-  return Keep;
+  return _createClass(Keep);
 }(_xfa_object.XFAObject);
 
 var KeyUsage = /*#__PURE__*/function (_XFAObject49) {
@@ -4224,7 +4224,7 @@ var KeyUsage = /*#__PURE__*/function (_XFAObject49) {
     return _this63;
   }
 
-  return KeyUsage;
+  return _createClass(KeyUsage);
 }(_xfa_object.XFAObject);
 
 var Line = /*#__PURE__*/function (_XFAObject50) {
@@ -4418,7 +4418,7 @@ var Manifest = /*#__PURE__*/function (_XFAObject52) {
     return _this67;
   }
 
-  return Manifest;
+  return _createClass(Manifest);
 }(_xfa_object.XFAObject);
 
 var Margin = /*#__PURE__*/function (_XFAObject53) {
@@ -4480,7 +4480,7 @@ var Mdp = /*#__PURE__*/function (_XFAObject54) {
     return _this69;
   }
 
-  return Mdp;
+  return _createClass(Mdp);
 }(_xfa_object.XFAObject);
 
 var Medium = /*#__PURE__*/function (_XFAObject55) {
@@ -4507,7 +4507,7 @@ var Medium = /*#__PURE__*/function (_XFAObject55) {
     return _this70;
   }
 
-  return Medium;
+  return _createClass(Medium);
 }(_xfa_object.XFAObject);
 
 var Message = /*#__PURE__*/function (_XFAObject56) {
@@ -4528,7 +4528,7 @@ var Message = /*#__PURE__*/function (_XFAObject56) {
     return _this71;
   }
 
-  return Message;
+  return _createClass(Message);
 }(_xfa_object.XFAObject);
 
 var NumericEdit = /*#__PURE__*/function (_XFAObject57) {
@@ -4673,7 +4673,7 @@ var Oid = /*#__PURE__*/function (_StringObject5) {
     return _this74;
   }
 
-  return Oid;
+  return _createClass(Oid);
 }(_xfa_object.StringObject);
 
 var Oids = /*#__PURE__*/function (_XFAObject59) {
@@ -4695,7 +4695,7 @@ var Oids = /*#__PURE__*/function (_XFAObject59) {
     return _this75;
   }
 
-  return Oids;
+  return _createClass(Oids);
 }(_xfa_object.XFAObject);
 
 var Overflow = /*#__PURE__*/function (_XFAObject60) {
@@ -5153,7 +5153,7 @@ var PasswordEdit = /*#__PURE__*/function (_XFAObject64) {
     return _this80;
   }
 
-  return PasswordEdit;
+  return _createClass(PasswordEdit);
 }(_xfa_object.XFAObject);
 
 var Pattern = /*#__PURE__*/function (_XFAObject65) {
@@ -5229,7 +5229,7 @@ var Picture = /*#__PURE__*/function (_StringObject6) {
     return _this82;
   }
 
-  return Picture;
+  return _createClass(Picture);
 }(_xfa_object.StringObject);
 
 var Proto = /*#__PURE__*/function (_XFAObject66) {
@@ -5356,7 +5356,7 @@ var Proto = /*#__PURE__*/function (_XFAObject66) {
     return _this83;
   }
 
-  return Proto;
+  return _createClass(Proto);
 }(_xfa_object.XFAObject);
 
 var Radial = /*#__PURE__*/function (_XFAObject67) {
@@ -5410,7 +5410,7 @@ var Reason = /*#__PURE__*/function (_StringObject7) {
     return _this85;
   }
 
-  return Reason;
+  return _createClass(Reason);
 }(_xfa_object.StringObject);
 
 var Reasons = /*#__PURE__*/function (_XFAObject68) {
@@ -5432,7 +5432,7 @@ var Reasons = /*#__PURE__*/function (_XFAObject68) {
     return _this86;
   }
 
-  return Reasons;
+  return _createClass(Reasons);
 }(_xfa_object.XFAObject);
 
 var Rectangle = /*#__PURE__*/function (_XFAObject69) {
@@ -5544,7 +5544,7 @@ var RefElement = /*#__PURE__*/function (_StringObject8) {
     return _this88;
   }
 
-  return RefElement;
+  return _createClass(RefElement);
 }(_xfa_object.StringObject);
 
 var Script = /*#__PURE__*/function (_StringObject9) {
@@ -5568,7 +5568,7 @@ var Script = /*#__PURE__*/function (_StringObject9) {
     return _this89;
   }
 
-  return Script;
+  return _createClass(Script);
 }(_xfa_object.StringObject);
 
 var SetProperty = /*#__PURE__*/function (_XFAObject70) {
@@ -5588,7 +5588,7 @@ var SetProperty = /*#__PURE__*/function (_XFAObject70) {
     return _this90;
   }
 
-  return SetProperty;
+  return _createClass(SetProperty);
 }(_xfa_object.XFAObject);
 
 exports.SetProperty = SetProperty;
@@ -5615,7 +5615,7 @@ var SignData = /*#__PURE__*/function (_XFAObject71) {
     return _this91;
   }
 
-  return SignData;
+  return _createClass(SignData);
 }(_xfa_object.XFAObject);
 
 var Signature = /*#__PURE__*/function (_XFAObject72) {
@@ -5641,7 +5641,7 @@ var Signature = /*#__PURE__*/function (_XFAObject72) {
     return _this92;
   }
 
-  return Signature;
+  return _createClass(Signature);
 }(_xfa_object.XFAObject);
 
 var Signing = /*#__PURE__*/function (_XFAObject73) {
@@ -5663,7 +5663,7 @@ var Signing = /*#__PURE__*/function (_XFAObject73) {
     return _this93;
   }
 
-  return Signing;
+  return _createClass(Signing);
 }(_xfa_object.XFAObject);
 
 var Solid = /*#__PURE__*/function (_XFAObject74) {
@@ -5720,7 +5720,7 @@ var Speak = /*#__PURE__*/function (_StringObject10) {
     return _this95;
   }
 
-  return Speak;
+  return _createClass(Speak);
 }(_xfa_object.StringObject);
 
 var Stipple = /*#__PURE__*/function (_XFAObject75) {
@@ -6303,7 +6303,7 @@ var SubjectDNs = /*#__PURE__*/function (_XFAObject78) {
     return _this100;
   }
 
-  return SubjectDNs;
+  return _createClass(SubjectDNs);
 }(_xfa_object.XFAObject);
 
 var Submit = /*#__PURE__*/function (_XFAObject79) {
@@ -6343,7 +6343,7 @@ var Submit = /*#__PURE__*/function (_XFAObject79) {
     return _this101;
   }
 
-  return Submit;
+  return _createClass(Submit);
 }(_xfa_object.XFAObject);
 
 var Template = /*#__PURE__*/function (_XFAObject80) {
@@ -7010,7 +7010,7 @@ var TimeStamp = /*#__PURE__*/function (_XFAObject82) {
     return _this107;
   }
 
-  return TimeStamp;
+  return _createClass(TimeStamp);
 }(_xfa_object.XFAObject);
 
 var ToolTip = /*#__PURE__*/function (_StringObject12) {
@@ -7031,7 +7031,7 @@ var ToolTip = /*#__PURE__*/function (_StringObject12) {
     return _this108;
   }
 
-  return ToolTip;
+  return _createClass(ToolTip);
 }(_xfa_object.StringObject);
 
 var Traversal = /*#__PURE__*/function (_XFAObject83) {
@@ -7053,7 +7053,7 @@ var Traversal = /*#__PURE__*/function (_XFAObject83) {
     return _this109;
   }
 
-  return Traversal;
+  return _createClass(Traversal);
 }(_xfa_object.XFAObject);
 
 var Traverse = /*#__PURE__*/function (_XFAObject84) {
@@ -7197,7 +7197,7 @@ var Validate = /*#__PURE__*/function (_XFAObject86) {
     return _this112;
   }
 
-  return Validate;
+  return _createClass(Validate);
 }(_xfa_object.XFAObject);
 
 var Value = /*#__PURE__*/function (_XFAObject87) {

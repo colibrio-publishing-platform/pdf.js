@@ -21,7 +21,7 @@
  */
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -36,11 +36,11 @@ var _utils = require("./utils.js");
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
@@ -75,7 +75,7 @@ var CalendarSymbols = /*#__PURE__*/function (_XFAObject) {
     return _this;
   }
 
-  return CalendarSymbols;
+  return _createClass(CalendarSymbols);
 }(_xfa_object.XFAObject);
 
 var CurrencySymbol = /*#__PURE__*/function (_StringObject) {
@@ -93,7 +93,7 @@ var CurrencySymbol = /*#__PURE__*/function (_StringObject) {
     return _this2;
   }
 
-  return CurrencySymbol;
+  return _createClass(CurrencySymbol);
 }(_xfa_object.StringObject);
 
 var CurrencySymbols = /*#__PURE__*/function (_XFAObject2) {
@@ -111,7 +111,7 @@ var CurrencySymbols = /*#__PURE__*/function (_XFAObject2) {
     return _this3;
   }
 
-  return CurrencySymbols;
+  return _createClass(CurrencySymbols);
 }(_xfa_object.XFAObject);
 
 var DatePattern = /*#__PURE__*/function (_StringObject2) {
@@ -129,7 +129,7 @@ var DatePattern = /*#__PURE__*/function (_StringObject2) {
     return _this4;
   }
 
-  return DatePattern;
+  return _createClass(DatePattern);
 }(_xfa_object.StringObject);
 
 var DatePatterns = /*#__PURE__*/function (_XFAObject3) {
@@ -147,7 +147,7 @@ var DatePatterns = /*#__PURE__*/function (_XFAObject3) {
     return _this5;
   }
 
-  return DatePatterns;
+  return _createClass(DatePatterns);
 }(_xfa_object.XFAObject);
 
 var DateTimeSymbols = /*#__PURE__*/function (_ContentObject) {
@@ -161,7 +161,7 @@ var DateTimeSymbols = /*#__PURE__*/function (_ContentObject) {
     return _super6.call(this, LOCALE_SET_NS_ID, "dateTimeSymbols");
   }
 
-  return DateTimeSymbols;
+  return _createClass(DateTimeSymbols);
 }(_xfa_object.ContentObject);
 
 var Day = /*#__PURE__*/function (_StringObject3) {
@@ -175,7 +175,7 @@ var Day = /*#__PURE__*/function (_StringObject3) {
     return _super7.call(this, LOCALE_SET_NS_ID, "day");
   }
 
-  return Day;
+  return _createClass(Day);
 }(_xfa_object.StringObject);
 
 var DayNames = /*#__PURE__*/function (_XFAObject4) {
@@ -200,7 +200,7 @@ var DayNames = /*#__PURE__*/function (_XFAObject4) {
     return _this6;
   }
 
-  return DayNames;
+  return _createClass(DayNames);
 }(_xfa_object.XFAObject);
 
 var Era = /*#__PURE__*/function (_StringObject4) {
@@ -214,7 +214,7 @@ var Era = /*#__PURE__*/function (_StringObject4) {
     return _super9.call(this, LOCALE_SET_NS_ID, "era");
   }
 
-  return Era;
+  return _createClass(Era);
 }(_xfa_object.StringObject);
 
 var EraNames = /*#__PURE__*/function (_XFAObject5) {
@@ -232,7 +232,7 @@ var EraNames = /*#__PURE__*/function (_XFAObject5) {
     return _this7;
   }
 
-  return EraNames;
+  return _createClass(EraNames);
 }(_xfa_object.XFAObject);
 
 var Locale = /*#__PURE__*/function (_XFAObject6) {
@@ -259,7 +259,7 @@ var Locale = /*#__PURE__*/function (_XFAObject6) {
     return _this8;
   }
 
-  return Locale;
+  return _createClass(Locale);
 }(_xfa_object.XFAObject);
 
 var LocaleSet = /*#__PURE__*/function (_XFAObject7) {
@@ -277,7 +277,7 @@ var LocaleSet = /*#__PURE__*/function (_XFAObject7) {
     return _this9;
   }
 
-  return LocaleSet;
+  return _createClass(LocaleSet);
 }(_xfa_object.XFAObject);
 
 var Meridiem = /*#__PURE__*/function (_StringObject5) {
@@ -291,7 +291,7 @@ var Meridiem = /*#__PURE__*/function (_StringObject5) {
     return _super13.call(this, LOCALE_SET_NS_ID, "meridiem");
   }
 
-  return Meridiem;
+  return _createClass(Meridiem);
 }(_xfa_object.StringObject);
 
 var MeridiemNames = /*#__PURE__*/function (_XFAObject8) {
@@ -309,7 +309,7 @@ var MeridiemNames = /*#__PURE__*/function (_XFAObject8) {
     return _this10;
   }
 
-  return MeridiemNames;
+  return _createClass(MeridiemNames);
 }(_xfa_object.XFAObject);
 
 var Month = /*#__PURE__*/function (_StringObject6) {
@@ -323,7 +323,7 @@ var Month = /*#__PURE__*/function (_StringObject6) {
     return _super15.call(this, LOCALE_SET_NS_ID, "month");
   }
 
-  return Month;
+  return _createClass(Month);
 }(_xfa_object.StringObject);
 
 var MonthNames = /*#__PURE__*/function (_XFAObject9) {
@@ -348,7 +348,7 @@ var MonthNames = /*#__PURE__*/function (_XFAObject9) {
     return _this11;
   }
 
-  return MonthNames;
+  return _createClass(MonthNames);
 }(_xfa_object.XFAObject);
 
 var NumberPattern = /*#__PURE__*/function (_StringObject7) {
@@ -366,7 +366,7 @@ var NumberPattern = /*#__PURE__*/function (_StringObject7) {
     return _this12;
   }
 
-  return NumberPattern;
+  return _createClass(NumberPattern);
 }(_xfa_object.StringObject);
 
 var NumberPatterns = /*#__PURE__*/function (_XFAObject10) {
@@ -384,7 +384,7 @@ var NumberPatterns = /*#__PURE__*/function (_XFAObject10) {
     return _this13;
   }
 
-  return NumberPatterns;
+  return _createClass(NumberPatterns);
 }(_xfa_object.XFAObject);
 
 var NumberSymbol = /*#__PURE__*/function (_StringObject8) {
@@ -402,7 +402,7 @@ var NumberSymbol = /*#__PURE__*/function (_StringObject8) {
     return _this14;
   }
 
-  return NumberSymbol;
+  return _createClass(NumberSymbol);
 }(_xfa_object.StringObject);
 
 var NumberSymbols = /*#__PURE__*/function (_XFAObject11) {
@@ -420,7 +420,7 @@ var NumberSymbols = /*#__PURE__*/function (_XFAObject11) {
     return _this15;
   }
 
-  return NumberSymbols;
+  return _createClass(NumberSymbols);
 }(_xfa_object.XFAObject);
 
 var TimePattern = /*#__PURE__*/function (_StringObject9) {
@@ -438,7 +438,7 @@ var TimePattern = /*#__PURE__*/function (_StringObject9) {
     return _this16;
   }
 
-  return TimePattern;
+  return _createClass(TimePattern);
 }(_xfa_object.StringObject);
 
 var TimePatterns = /*#__PURE__*/function (_XFAObject12) {
@@ -456,7 +456,7 @@ var TimePatterns = /*#__PURE__*/function (_XFAObject12) {
     return _this17;
   }
 
-  return TimePatterns;
+  return _createClass(TimePatterns);
 }(_xfa_object.XFAObject);
 
 var TypeFace = /*#__PURE__*/function (_XFAObject13) {
@@ -474,7 +474,7 @@ var TypeFace = /*#__PURE__*/function (_XFAObject13) {
     return _this18;
   }
 
-  return TypeFace;
+  return _createClass(TypeFace);
 }(_xfa_object.XFAObject);
 
 var TypeFaces = /*#__PURE__*/function (_XFAObject14) {
@@ -492,7 +492,7 @@ var TypeFaces = /*#__PURE__*/function (_XFAObject14) {
     return _this19;
   }
 
-  return TypeFaces;
+  return _createClass(TypeFaces);
 }(_xfa_object.XFAObject);
 
 var LocaleSetNamespace = /*#__PURE__*/function () {

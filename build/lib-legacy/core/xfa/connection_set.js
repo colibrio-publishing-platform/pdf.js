@@ -21,7 +21,7 @@
  */
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -34,11 +34,11 @@ var _xfa_object = require("./xfa_object.js");
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
@@ -71,7 +71,7 @@ var ConnectionSet = /*#__PURE__*/function (_XFAObject) {
     return _this;
   }
 
-  return ConnectionSet;
+  return _createClass(ConnectionSet);
 }(_xfa_object.XFAObject);
 
 var EffectiveInputPolicy = /*#__PURE__*/function (_XFAObject2) {
@@ -92,7 +92,7 @@ var EffectiveInputPolicy = /*#__PURE__*/function (_XFAObject2) {
     return _this2;
   }
 
-  return EffectiveInputPolicy;
+  return _createClass(EffectiveInputPolicy);
 }(_xfa_object.XFAObject);
 
 var EffectiveOutputPolicy = /*#__PURE__*/function (_XFAObject3) {
@@ -113,7 +113,7 @@ var EffectiveOutputPolicy = /*#__PURE__*/function (_XFAObject3) {
     return _this3;
   }
 
-  return EffectiveOutputPolicy;
+  return _createClass(EffectiveOutputPolicy);
 }(_xfa_object.XFAObject);
 
 var Operation = /*#__PURE__*/function (_StringObject) {
@@ -136,7 +136,7 @@ var Operation = /*#__PURE__*/function (_StringObject) {
     return _this4;
   }
 
-  return Operation;
+  return _createClass(Operation);
 }(_xfa_object.StringObject);
 
 var RootElement = /*#__PURE__*/function (_StringObject2) {
@@ -157,7 +157,7 @@ var RootElement = /*#__PURE__*/function (_StringObject2) {
     return _this5;
   }
 
-  return RootElement;
+  return _createClass(RootElement);
 }(_xfa_object.StringObject);
 
 var SoapAction = /*#__PURE__*/function (_StringObject3) {
@@ -178,7 +178,7 @@ var SoapAction = /*#__PURE__*/function (_StringObject3) {
     return _this6;
   }
 
-  return SoapAction;
+  return _createClass(SoapAction);
 }(_xfa_object.StringObject);
 
 var SoapAddress = /*#__PURE__*/function (_StringObject4) {
@@ -199,7 +199,7 @@ var SoapAddress = /*#__PURE__*/function (_StringObject4) {
     return _this7;
   }
 
-  return SoapAddress;
+  return _createClass(SoapAddress);
 }(_xfa_object.StringObject);
 
 var Uri = /*#__PURE__*/function (_StringObject5) {
@@ -220,7 +220,7 @@ var Uri = /*#__PURE__*/function (_StringObject5) {
     return _this8;
   }
 
-  return Uri;
+  return _createClass(Uri);
 }(_xfa_object.StringObject);
 
 var WsdlAddress = /*#__PURE__*/function (_StringObject6) {
@@ -241,7 +241,7 @@ var WsdlAddress = /*#__PURE__*/function (_StringObject6) {
     return _this9;
   }
 
-  return WsdlAddress;
+  return _createClass(WsdlAddress);
 }(_xfa_object.StringObject);
 
 var WsdlConnection = /*#__PURE__*/function (_XFAObject4) {
@@ -266,7 +266,7 @@ var WsdlConnection = /*#__PURE__*/function (_XFAObject4) {
     return _this10;
   }
 
-  return WsdlConnection;
+  return _createClass(WsdlConnection);
 }(_xfa_object.XFAObject);
 
 var XmlConnection = /*#__PURE__*/function (_XFAObject5) {
@@ -286,7 +286,7 @@ var XmlConnection = /*#__PURE__*/function (_XFAObject5) {
     return _this11;
   }
 
-  return XmlConnection;
+  return _createClass(XmlConnection);
 }(_xfa_object.XFAObject);
 
 var XsdConnection = /*#__PURE__*/function (_XFAObject6) {
@@ -307,7 +307,7 @@ var XsdConnection = /*#__PURE__*/function (_XFAObject6) {
     return _this12;
   }
 
-  return XsdConnection;
+  return _createClass(XsdConnection);
 }(_xfa_object.XFAObject);
 
 var ConnectionSetNamespace = /*#__PURE__*/function () {

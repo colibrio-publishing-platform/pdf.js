@@ -33,5 +33,5 @@ Object.defineProperty(exports, "WorkerMessageHandler", {
 
 var _worker = require("./core/worker.js");
 
-var pdfjsVersion = '2.12.316';
-var pdfjsBuild = '2d63a99ba';
+var pdfjsVersion = '2.12.323';
+var pdfjsBuild = '7ad106951';

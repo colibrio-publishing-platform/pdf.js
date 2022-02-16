@@ -24,6 +24,12 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+Object.defineProperty(exports, "AnnotationElement", {
+  enumerable: true,
+  get: function get() {
+    return _annotation_layer.AnnotationElement;
+  }
+});
 Object.defineProperty(exports, "AnnotationLayer", {
   enumerable: true,
   get: function get() {
@@ -265,8 +271,8 @@ var _svg = require("./display/svg.js");
 
 var _xfa_layer = require("./display/xfa_layer.js");
 
-var pdfjsVersion = '2.12.316';
-var pdfjsBuild = '2d63a99ba';
+var pdfjsVersion = '2.12.323';
+var pdfjsBuild = '7ad106951';
 {
   if (_is_node.isNodeJS) {
     var _require = require("./display/node_stream.js"),

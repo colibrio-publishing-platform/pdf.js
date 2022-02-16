@@ -44,7 +44,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 var ON_CURVE_POINT = 1 << 0;
 var X_SHORT_VECTOR = 1 << 1;
@@ -344,7 +344,7 @@ var GlyphHeader = /*#__PURE__*/function () {
   return GlyphHeader;
 }();
 
-var Contour = function Contour(_ref4) {
+var Contour = /*#__PURE__*/_createClass(function Contour(_ref4) {
   var flags = _ref4.flags,
       xCoordinates = _ref4.xCoordinates,
       yCoordinates = _ref4.yCoordinates;
@@ -354,7 +354,7 @@ var Contour = function Contour(_ref4) {
   this.xCoordinates = xCoordinates;
   this.yCoordinates = yCoordinates;
   this.flags = flags;
-};
+});
 
 var SimpleGlyph = /*#__PURE__*/function () {
   function SimpleGlyph(_ref5) {

@@ -76,7 +76,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 function _classPrivateMethodInitSpec(obj, privateSet) { _checkPrivateRedeclaration(obj, privateSet); privateSet.add(obj); }
 
@@ -113,7 +113,7 @@ var _destroyFirstView = /*#__PURE__*/new WeakSet();
 
 _Symbol$iterator = Symbol.iterator;
 
-var PDFPageViewBuffer = /*#__PURE__*/function (_Symbol$iterator2) {
+var PDFPageViewBuffer = /*#__PURE__*/function () {
   function PDFPageViewBuffer(size) {
     _classCallCheck(this, PDFPageViewBuffer);
 
@@ -193,14 +193,14 @@ var PDFPageViewBuffer = /*#__PURE__*/function (_Symbol$iterator2) {
       return _classPrivateFieldGet(this, _buf).has(view);
     }
   }, {
-    key: _Symbol$iterator2,
+    key: _Symbol$iterator,
     value: function value() {
       return _classPrivateFieldGet(this, _buf).keys();
     }
   }]);
 
   return PDFPageViewBuffer;
-}(_Symbol$iterator);
+}();
 
 exports.PDFPageViewBuffer = PDFPageViewBuffer;
 
@@ -296,7 +296,7 @@ var BaseViewer = /*#__PURE__*/function () {
       throw new Error("Cannot initialize BaseViewer.");
     }
 
-    var viewerVersion = '2.12.316';
+    var viewerVersion = '2.12.323';
 
     if (_pdf.version !== viewerVersion) {
       throw new Error("The API version \"".concat(_pdf.version, "\" does not match the Viewer version \"").concat(viewerVersion, "\"."));

@@ -183,5 +183,5 @@ var _text_layer_builder = require("./text_layer_builder.js");
 
 var _xfa_layer_builder = require("./xfa_layer_builder.js");
 
-var pdfjsVersion = '2.12.316';
-var pdfjsBuild = '2d63a99ba';
+var pdfjsVersion = '2.12.323';
+var pdfjsBuild = '7ad106951';

@@ -34,6 +34,10 @@ import {
   RenderingCancelledException,
 } from "./display/display_utils.js";
 import {
+  AnnotationElement,
+  AnnotationLayer,
+} from "./display/annotation_layer.js";
+import {
   AnnotationMode,
   CMapCompressionType,
   createObjectURL,
@@ -60,7 +64,6 @@ import {
   setPDFNetworkStreamFactory,
   version,
 } from "./display/api.js";
-import { AnnotationLayer, AnnotationElement } from "./display/annotation_layer.js";
 import { GlobalWorkerOptions } from "./display/worker_options.js";
 import { isNodeJS } from "./shared/is_node.js";
 import { renderTextLayer } from "./display/text_layer.js";

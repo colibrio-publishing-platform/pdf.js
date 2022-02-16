@@ -21,7 +21,7 @@
  */
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -59,11 +59,11 @@ var _factory = require("./xfa/factory.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function _get(target, property, receiver) { if (typeof Reflect !== "undefined" && Reflect.get) { _get = Reflect.get; } else { _get = function _get(target, property, receiver) { var base = _superPropBase(target, property); if (!base) return; var desc = Object.getOwnPropertyDescriptor(base, property); if (desc.get) { return desc.get.call(receiver); } return desc.value; }; } return _get(target, property, receiver || target); }
+function _get() { if (typeof Reflect !== "undefined" && Reflect.get) { _get = Reflect.get; } else { _get = function _get(target, property, receiver) { var base = _superPropBase(target, property); if (!base) return; var desc = Object.getOwnPropertyDescriptor(base, property); if (desc.get) { return desc.get.call(arguments.length < 3 ? target : receiver); } return desc.value; }; } return _get.apply(this, arguments); }
 
 function _superPropBase(object, property) { while (!Object.prototype.hasOwnProperty.call(object, property)) { object = _getPrototypeOf(object); if (object === null) break; } return object; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
@@ -99,7 +99,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 var AnnotationFactory = /*#__PURE__*/function () {
   function AnnotationFactory() {
@@ -2612,7 +2612,7 @@ var TextAnnotation = /*#__PURE__*/function (_MarkupAnnotation) {
     return _this10;
   }
 
-  return TextAnnotation;
+  return _createClass(TextAnnotation);
 }(MarkupAnnotation);
 
 var LinkAnnotation = /*#__PURE__*/function (_Annotation3) {
@@ -2642,7 +2642,7 @@ var LinkAnnotation = /*#__PURE__*/function (_Annotation3) {
     return _this11;
   }
 
-  return LinkAnnotation;
+  return _createClass(LinkAnnotation);
 }(Annotation);
 
 var PopupAnnotation = /*#__PURE__*/function (_Annotation4) {
@@ -2721,7 +2721,7 @@ var PopupAnnotation = /*#__PURE__*/function (_Annotation4) {
     return _this12;
   }
 
-  return PopupAnnotation;
+  return _createClass(PopupAnnotation);
 }(Annotation);
 
 var FreeTextAnnotation = /*#__PURE__*/function (_MarkupAnnotation2) {
@@ -2739,7 +2739,7 @@ var FreeTextAnnotation = /*#__PURE__*/function (_MarkupAnnotation2) {
     return _this13;
   }
 
-  return FreeTextAnnotation;
+  return _createClass(FreeTextAnnotation);
 }(MarkupAnnotation);
 
 var LineAnnotation = /*#__PURE__*/function (_MarkupAnnotation3) {
@@ -2798,7 +2798,7 @@ var LineAnnotation = /*#__PURE__*/function (_MarkupAnnotation3) {
     return _this14;
   }
 
-  return LineAnnotation;
+  return _createClass(LineAnnotation);
 }(MarkupAnnotation);
 
 var SquareAnnotation = /*#__PURE__*/function (_MarkupAnnotation4) {
@@ -2863,7 +2863,7 @@ var SquareAnnotation = /*#__PURE__*/function (_MarkupAnnotation4) {
     return _this15;
   }
 
-  return SquareAnnotation;
+  return _createClass(SquareAnnotation);
 }(MarkupAnnotation);
 
 var CircleAnnotation = /*#__PURE__*/function (_MarkupAnnotation5) {
@@ -2934,7 +2934,7 @@ var CircleAnnotation = /*#__PURE__*/function (_MarkupAnnotation5) {
     return _this16;
   }
 
-  return CircleAnnotation;
+  return _createClass(CircleAnnotation);
 }(MarkupAnnotation);
 
 var PolylineAnnotation = /*#__PURE__*/function (_MarkupAnnotation6) {
@@ -3014,7 +3014,7 @@ var PolylineAnnotation = /*#__PURE__*/function (_MarkupAnnotation6) {
     return _this17;
   }
 
-  return PolylineAnnotation;
+  return _createClass(PolylineAnnotation);
 }(MarkupAnnotation);
 
 var PolygonAnnotation = /*#__PURE__*/function (_PolylineAnnotation) {
@@ -3032,7 +3032,7 @@ var PolygonAnnotation = /*#__PURE__*/function (_PolylineAnnotation) {
     return _this18;
   }
 
-  return PolygonAnnotation;
+  return _createClass(PolygonAnnotation);
 }(PolylineAnnotation);
 
 var CaretAnnotation = /*#__PURE__*/function (_MarkupAnnotation7) {
@@ -3050,7 +3050,7 @@ var CaretAnnotation = /*#__PURE__*/function (_MarkupAnnotation7) {
     return _this19;
   }
 
-  return CaretAnnotation;
+  return _createClass(CaretAnnotation);
 }(MarkupAnnotation);
 
 var InkAnnotation = /*#__PURE__*/function (_MarkupAnnotation8) {
@@ -3161,7 +3161,7 @@ var InkAnnotation = /*#__PURE__*/function (_MarkupAnnotation8) {
     return _this20;
   }
 
-  return InkAnnotation;
+  return _createClass(InkAnnotation);
 }(MarkupAnnotation);
 
 var HighlightAnnotation = /*#__PURE__*/function (_MarkupAnnotation9) {
@@ -3209,7 +3209,7 @@ var HighlightAnnotation = /*#__PURE__*/function (_MarkupAnnotation9) {
     return _this21;
   }
 
-  return HighlightAnnotation;
+  return _createClass(HighlightAnnotation);
 }(MarkupAnnotation);
 
 var UnderlineAnnotation = /*#__PURE__*/function (_MarkupAnnotation10) {
@@ -3251,7 +3251,7 @@ var UnderlineAnnotation = /*#__PURE__*/function (_MarkupAnnotation10) {
     return _this22;
   }
 
-  return UnderlineAnnotation;
+  return _createClass(UnderlineAnnotation);
 }(MarkupAnnotation);
 
 var SquigglyAnnotation = /*#__PURE__*/function (_MarkupAnnotation11) {
@@ -3306,7 +3306,7 @@ var SquigglyAnnotation = /*#__PURE__*/function (_MarkupAnnotation11) {
     return _this23;
   }
 
-  return SquigglyAnnotation;
+  return _createClass(SquigglyAnnotation);
 }(MarkupAnnotation);
 
 var StrikeOutAnnotation = /*#__PURE__*/function (_MarkupAnnotation12) {
@@ -3348,7 +3348,7 @@ var StrikeOutAnnotation = /*#__PURE__*/function (_MarkupAnnotation12) {
     return _this24;
   }
 
-  return StrikeOutAnnotation;
+  return _createClass(StrikeOutAnnotation);
 }(MarkupAnnotation);
 
 var StampAnnotation = /*#__PURE__*/function (_MarkupAnnotation13) {
@@ -3366,7 +3366,7 @@ var StampAnnotation = /*#__PURE__*/function (_MarkupAnnotation13) {
     return _this25;
   }
 
-  return StampAnnotation;
+  return _createClass(StampAnnotation);
 }(MarkupAnnotation);
 
 var FileAttachmentAnnotation = /*#__PURE__*/function (_MarkupAnnotation14) {
@@ -3386,5 +3386,5 @@ var FileAttachmentAnnotation = /*#__PURE__*/function (_MarkupAnnotation14) {
     return _this26;
   }
 
-  return FileAttachmentAnnotation;
+  return _createClass(FileAttachmentAnnotation);
 }(MarkupAnnotation);

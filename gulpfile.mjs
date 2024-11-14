@@ -81,9 +81,9 @@ const config = JSON.parse(fs.readFileSync(CONFIG_FILE).toString());
 
 const ENV_TARGETS = [
   "last 2 versions",
-  "Chrome >= 103",
+  "Chrome >= 52",
   "Firefox ESR",
-  "Safari >= 16.4",
+  "Safari >= 12",
   "Node >= 18",
   "> 1%",
   "not IE > 0",
@@ -462,9 +462,9 @@ function tweakWebpackOutput(jsName) {
 
 function createMainBundle(defines) {
   const mainFileConfig = createWebpackConfig(defines, {
-    filename: defines.MINIFIED ? "pdf.min.mjs" : "pdf.mjs",
+    filename: defines.MINIFIED ? "pdf.min.js" : "pdf.js",
     library: {
-      type: "module",
+      type: "commonjs",
     },
   });
   return gulp
@@ -527,10 +527,10 @@ function createSandboxBundle(defines, extraOptions = undefined) {
     sandboxDefines,
     {
       filename: sandboxDefines.MINIFIED
-        ? "pdf.sandbox.min.mjs"
-        : "pdf.sandbox.mjs",
+        ? "pdf.sandbox.min.js"
+        : "pdf.sandbox.js",
       library: {
-        type: "module",
+        type: "commonjs",
       },
     },
     extraOptions
@@ -544,9 +544,9 @@ function createSandboxBundle(defines, extraOptions = undefined) {
 
 function createWorkerBundle(defines) {
   const workerFileConfig = createWebpackConfig(defines, {
-    filename: defines.MINIFIED ? "pdf.worker.min.mjs" : "pdf.worker.mjs",
+    filename: defines.MINIFIED ? "pdf.worker.min.js" : "pdf.worker.js",
     library: {
-      type: "module",
+      type: "commonjs",
     },
   });
   return gulp

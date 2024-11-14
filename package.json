@@ -1,6 +1,7 @@
 {
   "name": "pdf.js",
   "type": "module",
+  "version": "4.8.69-colibrio",
   "devDependencies": {
     "@babel/core": "^7.25.8",
     "@babel/preset-env": "^7.25.8",

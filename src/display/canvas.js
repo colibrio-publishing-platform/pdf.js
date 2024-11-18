@@ -19,7 +19,6 @@ import {
   IDENTITY_MATRIX,
   ImageKind,
   info,
-  isNodeJS,
   OPS,
   shadow,
   TextRenderingMode,
@@ -56,6 +55,8 @@ const EXECUTION_STEPS = 10;
 const MAX_SIZE_TO_COMPILE = 1000;
 
 const FULL_CHUNK_HEIGHT = 16;
+
+const isNodeJS = false;
 
 /**
  * Overrides certain methods on a 2d ctx so that when they are called they

@@ -13,11 +13,13 @@
  * limitations under the License.
  */
 
-import { isNodeJS, warn } from "../shared/util.js";
+import { warn } from "../shared/util.js";
 import { BaseCanvasFactory } from "./canvas_factory.js";
 import { BaseCMapReaderFactory } from "./cmap_reader_factory.js";
 import { BaseFilterFactory } from "./filter_factory.js";
 import { BaseStandardFontDataFactory } from "./standard_fontdata_factory.js";
+
+const isNodeJS = false;
 
 if (typeof PDFJSDev !== "undefined" && PDFJSDev.test("MOZCENTRAL")) {
   throw new Error(

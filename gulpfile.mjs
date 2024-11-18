@@ -1135,7 +1135,7 @@ gulp.task(
     function createGenericLegacy() {
       console.log();
       console.log("### Creating generic (legacy) viewer");
-      const defines = { ...DEFINES, GENERIC: true, SKIP_BABEL: false };
+      const defines = { ...DEFINES, GENERIC: true, SKIP_BABEL: false, MINIFIED: true };
 
       return buildGeneric(defines, GENERIC_LEGACY_DIR);
     }

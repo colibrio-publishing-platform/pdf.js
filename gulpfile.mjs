@@ -46,6 +46,7 @@ import Vinyl from "vinyl";
 import webpack2 from "webpack";
 import webpackStream from "webpack-stream";
 import zip from "gulp-zip";
+import {babelPluginPrivateToPublic} from "./babel-plugin-private-to-public.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -99,7 +100,9 @@ const BABEL_TARGETS = ENV_TARGETS.join(", ");
 
 const BABEL_PRESET_ENV_OPTS = Object.freeze({
   corejs: "3.38.1",
-  exclude: ["web.structured-clone"],
+  debug: false,
+  loose: true,
+  exclude: ["web.structured-clone", "web.url.*", "web.url-search-params.*"],
   shippedProposals: true,
   useBuiltIns: "usage",
 });
@@ -321,6 +324,7 @@ function createWebpackConfig(
     ? undefined
     : [["@babel/preset-env", BABEL_PRESET_ENV_OPTS]];
   const babelPlugins = [
+    babelPluginPrivateToPublic,
     [
       babelPluginPDFJSPreprocessor,
       {
@@ -328,6 +332,9 @@ function createWebpackConfig(
         defines: bundleDefines,
       },
     ],
+    [ '@babel/plugin-transform-class-properties', { loose: true } ],
+    [ '@babel/plugin-transform-class-static-block', { loose: true }],
+    [ "@babel/plugin-transform-classes", { loose: true } ],
   ];
 
   const plugins = [];
@@ -1135,7 +1142,7 @@ gulp.task(
     function createGenericLegacy() {
       console.log();
       console.log("### Creating generic (legacy) viewer");
-      const defines = { ...DEFINES, GENERIC: true, SKIP_BABEL: false, MINIFIED: true };
+      const defines = { ...DEFINES, GENERIC: true, SKIP_BABEL: false };
 
       return buildGeneric(defines, GENERIC_LEGACY_DIR);
     }
@@ -2237,12 +2244,9 @@ gulp.task(
 function packageJson() {
   const VERSION = getVersionJSON().version;
 
-  const DIST_NAME = "pdfjs-dist";
-  const DIST_DESCRIPTION = "Generic build of Mozilla's PDF.js library.";
-  const DIST_KEYWORDS = ["Mozilla", "pdf", "pdf.js"];
-  const DIST_HOMEPAGE = "https://mozilla.github.io/pdf.js/";
-  const DIST_BUGS_URL = "https://github.com/mozilla/pdf.js/issues";
-  const DIST_GIT_URL = "https://github.com/mozilla/pdf.js.git";
+  const DIST_NAME = "colibrio-pdf-js-dist";
+  const DIST_DESCRIPTION = "Colibrio specific build of Mozilla's PDF.js library.";
+  const DIST_GIT_URL = "https://github.com/colibrio-publishing-platform/pdf.js";
   const DIST_LICENSE = "Apache-2.0";
 
   const npmManifest = {
@@ -2251,9 +2255,6 @@ function packageJson() {
     main: "build/pdf.mjs",
     types: "types/src/pdf.d.ts",
     description: DIST_DESCRIPTION,
-    keywords: DIST_KEYWORDS,
-    homepage: DIST_HOMEPAGE,
-    bugs: DIST_BUGS_URL,
     license: DIST_LICENSE,
     optionalDependencies: {
       canvas: "^3.0.0-rc2",
@@ -2325,8 +2326,8 @@ gulp.task(
         gulp
           .src(
             [
-              GENERIC_DIR + "build/{pdf,pdf.worker,pdf.sandbox}.mjs",
-              GENERIC_DIR + "build/{pdf,pdf.worker,pdf.sandbox}.mjs.map",
+              GENERIC_DIR + "build/{pdf,pdf.worker,pdf.sandbox}.*js",
+              GENERIC_DIR + "build/{pdf,pdf.worker,pdf.sandbox}.*js.map",
             ],
             { encoding: false }
           )
@@ -2334,31 +2335,31 @@ gulp.task(
         gulp
           .src(
             [
-              GENERIC_LEGACY_DIR + "build/{pdf,pdf.worker,pdf.sandbox}.mjs",
-              GENERIC_LEGACY_DIR + "build/{pdf,pdf.worker,pdf.sandbox}.mjs.map",
+              GENERIC_LEGACY_DIR + "build/{pdf,pdf.worker,pdf.sandbox}.*js",
+              GENERIC_LEGACY_DIR + "build/{pdf,pdf.worker,pdf.sandbox}.*js.map",
             ],
             { encoding: false }
           )
           .pipe(gulp.dest(DIST_DIR + "legacy/build/")),
         gulp
-          .src(MINIFIED_DIR + "build/{pdf,pdf.worker,pdf.sandbox}.min.mjs", {
+          .src(MINIFIED_DIR + "build/{pdf,pdf.worker,pdf.sandbox}.min.*js", {
             encoding: false,
           })
           .pipe(gulp.dest(DIST_DIR + "build/")),
         gulp
-          .src(MINIFIED_DIR + "image_decoders/pdf.image_decoders.min.mjs", {
+          .src(MINIFIED_DIR + "image_decoders/pdf.image_decoders.min.*js", {
             encoding: false,
           })
           .pipe(gulp.dest(DIST_DIR + "image_decoders/")),
         gulp
           .src(
-            MINIFIED_LEGACY_DIR + "build/{pdf,pdf.worker,pdf.sandbox}.min.mjs",
+            MINIFIED_LEGACY_DIR + "build/{pdf,pdf.worker,pdf.sandbox}.min.*js",
             { encoding: false }
           )
           .pipe(gulp.dest(DIST_DIR + "legacy/build/")),
         gulp
           .src(
-            MINIFIED_LEGACY_DIR + "image_decoders/pdf.image_decoders.min.mjs",
+            MINIFIED_LEGACY_DIR + "image_decoders/pdf.image_decoders.min.*js",
             { encoding: false }
           )
           .pipe(gulp.dest(DIST_DIR + "legacy/image_decoders/")),

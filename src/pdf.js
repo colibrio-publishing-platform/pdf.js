@@ -64,7 +64,7 @@ import {
 } from "./display/display_utils.js";
 import { AnnotationEditorLayer } from "./display/editor/annotation_editor_layer.js";
 import { AnnotationEditorUIManager } from "./display/editor/tools.js";
-import { AnnotationLayer } from "./display/annotation_layer.js";
+import { AnnotationLayer, AnnotationElement } from "./display/annotation_layer.js";
 import { ColorPicker } from "./display/editor/color_picker.js";
 import { DOMSVGFactory } from "./display/svg_factory.js";
 import { DrawLayer } from "./display/draw_layer.js";
@@ -92,6 +92,7 @@ export {
   AnnotationEditorParamsType,
   AnnotationEditorType,
   AnnotationEditorUIManager,
+  AnnotationElement,
   AnnotationLayer,
   AnnotationMode,
   build,

@@ -25,7 +25,6 @@ import {
   getVerbosityLevel,
   info,
   InvalidPDFException,
-  isNodeJS,
   MAX_IMAGE_SIZE_TO_CACHE,
   MissingPDFException,
   PasswordException,
@@ -78,6 +77,8 @@ import { XfaText } from "./xfa_text.js";
 const DEFAULT_RANGE_CHUNK_SIZE = 65536; // 2^16 = 65536
 const RENDERING_CANCELLED_TIMEOUT = 100; // ms
 const DELAYED_CLEANUP_TIMEOUT = 5000; // ms
+
+const isNodeJS = false;
 
 const DefaultCanvasFactory =
   typeof PDFJSDev !== "undefined" && PDFJSDev.test("GENERIC") && isNodeJS
@@ -2382,19 +2383,7 @@ class PDFWorker {
 
   // Loads worker code into the main-thread.
   static get _setupFakeWorkerGlobal() {
-    const loader = async () => {
-      if (this.#mainThreadWorkerMessageHandler) {
-        // The worker was already loaded using e.g. a `<script>` tag.
-        return this.#mainThreadWorkerMessageHandler;
-      }
-      const worker =
-        typeof PDFJSDev === "undefined"
-          ? await import("pdfjs/pdf.worker.js")
-          : await __non_webpack_import__(this.workerSrc);
-      return worker.WorkerMessageHandler;
-    };
-
-    return shadow(this, "_setupFakeWorkerGlobal", loader());
+    return Promise.reject('Fake worker not supported')
   }
 }
 

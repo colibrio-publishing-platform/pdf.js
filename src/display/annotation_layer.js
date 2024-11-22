@@ -3263,6 +3263,7 @@ class AnnotationLayer {
 }
 
 export {
+  AnnotationElement,
   AnnotationLayer,
   FreeTextAnnotationElement,
   HighlightAnnotationElement,

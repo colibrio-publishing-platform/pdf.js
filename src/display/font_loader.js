@@ -16,13 +16,14 @@
 import {
   assert,
   FontRenderOps,
-  isNodeJS,
   shadow,
   string32,
   toBase64Util,
   unreachable,
   warn,
 } from "../shared/util.js";
+
+const isNodeJS = false
 
 class FontLoader {
   #systemFonts = new Set();

@@ -19,7 +19,6 @@ import {
   getVerbosityLevel,
   info,
   InvalidPDFException,
-  isNodeJS,
   MissingPDFException,
   PasswordException,
   setVerbosityLevel,
@@ -42,6 +41,8 @@ import { incrementalUpdate } from "./writer.js";
 import { MessageHandler } from "../shared/message_handler.js";
 import { PDFWorkerStream } from "./worker_stream.js";
 import { StructTreeRoot } from "./struct_tree.js";
+
+const isNodeJS = false;
 
 class WorkerTask {
   constructor(name) {
